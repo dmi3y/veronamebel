@@ -1,0 +1,56 @@
+inputsTransparency = .25
+inputsColor = #fff
+
+.orderForm
+    transparerentBG()
+    padding 15px
+
+.innerForm
+    input
+    textarea
+        border none
+        width 100%
+        outline none
+        color #fff
+        font-family fontFamilyMain
+        font-size fontSizeMain
+.name,
+.phone
+    label
+        padding 8px 0
+        display inline-block
+    input
+        transparerentBG(inputsColor, inputsTransparency)
+        float right
+        padding 8px
+        max-width 870px
+
+.comment
+    margin 10px 0
+
+    div
+        transparerentBG(inputsColor, inputsTransparency)
+        padding 8px
+        margin-top 5px
+
+        .buttons
+            margin -8px
+        
+    textarea
+        height 190px
+        padding 0
+        resize none
+        background none
+
+.buttons
+    span
+        text-decoration underline
+        cursor pointer
+    input
+        display none
+
+input[type=file]
+    ~span
+        display inline-block
+        border 6px solid rgba(#fff, .3)
+        margin 0 3px
