@@ -5,6 +5,10 @@ inputsColor = #fff
     transparerentBG()
     padding 15px
 
+.opaqueBg
+    transparerentBG(inputsColor, inputsTransparency)
+
+
 .innerForm
     input
     textarea
@@ -20,7 +24,6 @@ inputsColor = #fff
         padding 8px 0
         display inline-block
     input
-        transparerentBG(inputsColor, inputsTransparency)
         float right
         padding 8px
         max-width 870px
@@ -29,13 +32,12 @@ inputsColor = #fff
     margin 10px 0
 
     div
-        transparerentBG(inputsColor, inputsTransparency)
         padding 8px
         margin-top 5px
 
         .buttons
             margin -8px
-        
+
     textarea
         height 190px
         padding 0
@@ -50,7 +52,13 @@ inputsColor = #fff
         display none
 
 input[type=file]
-    ~span
+
+    +.fileList
         display inline-block
-        border 6px solid rgba(#fff, .3)
-        margin 0 3px
+
+        b
+            display inline-block
+            margin 0 3px
+            transparerentBG(inputsColor, inputsTransparency)
+            width 15px
+            height 15px

@@ -6,22 +6,23 @@ block content
       .innerForm
         .name
           label(for="name") Имя:
-          input#name(name="client[name]", placeholder="Ваше Имя", autofocus, required)
+          input#name.opaqueBg(name="client[name]", placeholder="Ваше Имя", autofocus, required)
           .clr
         .phone
           label(for="phone") Телефон:
-          input#phone(name="client[phone]", placeholder="Контактный Телeфон", required)
+          input#phone.opaqueBg(name="client[phone]", placeholder="Контактный Телeфон", required)
           .clr
         .comment
           label#comment Комментарий:
-            div
+            .opaqueBg
               textarea(name="client[commnent]", placeholder="Дополнения, пожелания, контактные данные, емайл, скайп итд...")
-            .buttons
+            .buttons.opaqueBg
               |Вы можете
-              label 
+              label
                 span Прикрeпить файл(ы)
                 input(type="file", multiple name="client[files]")
-      .buttons 
+                span.fileList
+      .buttons
         label
           span Отправить сообщение
           input(type="submit", value="Отправить")

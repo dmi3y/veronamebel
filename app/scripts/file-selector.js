@@ -6,7 +6,7 @@ jQuery(function($) {
 			flen = files.length;
 
 		while (flen--) {
-			$(this).after('<span title="' + files[flen].name + '"></span>');
+			$(this).next('span').append('<b title="' + files[flen].name + '"></b>');
 		}
 
 	});
