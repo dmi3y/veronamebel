@@ -5,3 +5,5 @@ dist
 .DS_Store
 bower_components
 secret.yml
+composer.lock
+vendor

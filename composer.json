@@ -1,0 +1,5 @@
+{
+	"require": {
+		"nette/mail": "2.3.*@dev"
+	}
+}
