@@ -374,7 +374,11 @@ module.exports = function(grunt) {
     'copy:dist',
     'copy:assets',
     'rev',
-    'usemin',
+    'usemin'
+  ]);
+
+  grunt.retisterTask('deploy', [
+    'build',
     'sshexec:swipe',
     'sftp:upload'
   ]);
