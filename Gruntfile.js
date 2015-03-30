@@ -219,26 +219,6 @@ module.exports = function(grunt) {
         dirs: ['<%= folders.dist %>']
       }
     },
-    imagemin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= folders.app %>/images',
-          src: '{,*/}*.{png,jpg,jpeg}',
-          dest: '<%= folders.dist %>/images'
-        }]
-      }
-    },
-    svgmin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= folders.app %>/images',
-          src: '{,*/}*.svg',
-          dest: '<%= folders.dist %>/images'
-        }]
-      }
-    },
     cssmin: {
       dist: {
         files: {
@@ -377,7 +357,7 @@ module.exports = function(grunt) {
     'usemin'
   ]);
 
-  grunt.retisterTask('deploy', [
+  grunt.registerTask('deploy', [
     'build',
     'sshexec:swipe',
     'sftp:upload'

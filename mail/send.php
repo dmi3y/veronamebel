@@ -17,7 +17,7 @@ $from = '';
 $subject = 'Запрос на заказ мебели.';
 $body = '';
 
-var_dump($_POST);
+var_dump($_POST, $_FILES);
 if (FALSE) {
 
   $mail = new Message;
