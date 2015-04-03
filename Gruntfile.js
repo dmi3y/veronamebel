@@ -62,7 +62,7 @@ module.exports = function(grunt) {
           livereload: true
         },
         files: [
-          '<%= folders.tmp %>/*.php',
+          '<%= folders.tmp %>/*.html',
           '<%= folders.tmp %>/styles/{,*/}*.css',
           '{.tmp,<%= folders.app %>}/scripts/{,*/}*.js',
           '<%= folders.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
@@ -77,12 +77,12 @@ module.exports = function(grunt) {
       options: {
         port: 9000,
         // change this to '0.0.0.0' to access the server from outside
-        hostname: 'localhost',
+        hostname: '0.0.0.0',
         livereload: true
       },
       server: {
         options: {
-          open: true,
+          // open: true,
           base: [
             '<%= folders.tmp %>',
             '<%= folders.app %>'
@@ -125,7 +125,7 @@ module.exports = function(grunt) {
       all: {
         options: {
           run: true,
-          urls: ['http://localhost:<%= connect.options.port %>/index.php']
+          urls: ['http://localhost:<%= connect.options.port %>/index.html']
         }
       }
     },
@@ -167,7 +167,7 @@ module.exports = function(grunt) {
           cwd: '<%= folders.app %>/jade',
           src: ['{,*/}*.jade', '!**/_*'],
           dest: '.tmp/',
-          ext: '.php'
+          ext: '.html'
         }],
         options: {
           client: false,
@@ -176,7 +176,7 @@ module.exports = function(grunt) {
           data: function(dest /*, src*/) {
 
             var
-              page = (/.*\/(.+).php/).exec(dest)[1],
+              page = (/.*\/(.+).html/).exec(dest)[1],
               maplink = 'https://maps.google.com/maps?expflags=enable_star_based_justifications:true&ie=UTF8&cid=17452686713591379491&q=Verona+%D0%9C%D0%B5%D0%B1%D0%B5%D0%BB%D1%8C&iwloc=A',
               mapsrc = 'http://maps.googleapis.com/maps/api/staticmap?center=42.85925,74.61671&markers=color:0xff11ff|label:V|42.85910,74.62180&zoom=15&size=640x300&maptype=roadmap&sensor=false';
 
@@ -207,13 +207,13 @@ module.exports = function(grunt) {
       }
     },
     useminPrepare: {
-      html: '<%= folders.tmp %>/index.php',
+      html: '<%= folders.tmp %>/index.html',
       options: {
         dest: '<%= folders.dist %>'
       }
     },
     usemin: {
-      html: ['<%= folders.dist %>/{,*/}*.php'],
+      html: ['<%= folders.dist %>/{,*/}*.html'],
       css: ['<%= folders.dist %>/styles/{,*/}*.css'],
       options: {
         dirs: ['<%= folders.dist %>']
@@ -244,7 +244,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= folders.tmp %>',
-          src: '{,*/}*.php',
+          src: '{,*/}*.html',
           dest: '<%= folders.dist %>'
         }]
       }

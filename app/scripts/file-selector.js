@@ -3,10 +3,15 @@ jQuery(function($) {
 	$('input:file').change(function() {
 		var
 			files = this.files,
-			flen = files.length;
+			flen = files.length,
+      fCont = $(this).next('span');
 
-		while (flen--) {
-			$(this).next('span').append('<b title="' + files[flen].name + '"></b>');
+    fCont.empty();
+
+    while (flen--) {
+
+      fCont
+        .append('<b title="' + files[flen].name + '"></b>');
 		}
 
 	});

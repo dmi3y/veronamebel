@@ -2,25 +2,29 @@ extends /layouts/_default
 
 block content
   .orderForm
-    form(name="client", method="POST", action="/veronamebel/mail/send.php")
+    form(name="client", method="POST", action="/veronamebel/mail/send.php",  enctype="multipart/form-data")
       .innerForm
-        .name
+        .name.textFld
           label(for="name") Имя:
-          input#name.opaqueBg(name="client[name]", placeholder="Ваше Имя", autofocus, required)
+          input#name.opaqueBg(name="name", placeholder="Приятно познакомиться", autofocus, required)
           .clr
-        .phone
+        .phone.textFld
           label(for="phone") Телефон:
-          input#phone.opaqueBg(name="client[phone]", placeholder="Контактный Телeфон", required)
+          input#phone.opaqueBg(name="phone", type="tel", placeholder="Будем на связи")
+          .clr
+        .email.textFld
+          label(for="email") Почта:
+          input#email.opaqueBg(name="email", type="email", placeholder="Электронная", required)
           .clr
         .comment
           label#comment Комментарий:
             .opaqueBg
-              textarea(name="client[commnent]", placeholder="Дополнения, пожелания, контактные данные, емайл, скайп итд...")
+              textarea(name="comment", placeholder="Дополнения, пожелания, дополнительные контакты, скайп и тд...")
             .buttons.opaqueBg
               |Вы можете
               label
                 span Прикрeпить файл(ы)
-                input(type="file", multiple name="client[files]")
+                input(type="file", multiple, name="uploads[]")
                 span.fileList
       .buttons
         label
