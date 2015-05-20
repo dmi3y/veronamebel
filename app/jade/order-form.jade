@@ -2,7 +2,7 @@ extends /layouts/_default
 
 block content
   .orderForm
-    form(name="client", method="POST", action="/veronamebel/mail/send.php",  enctype="multipart/form-data")
+    form(name="client", method="POST", action="mail/send.php",  enctype="multipart/form-data")
       .innerForm
         .name.textFld
           label(for="name") Имя:

@@ -287,10 +287,10 @@ module.exports = function(grunt) {
       assets: {
         files: [{
           expand: true,
-          cwd: '<%= folders.app %>',
           dest: '<%= folders.dist %>',
           src: [
-            'assets/{,*/}*.*'
+            'vendor/{,*/}*.*',
+            'mail/{,*/}*.*'
           ]
         }]
       }

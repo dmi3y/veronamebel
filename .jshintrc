@@ -70,7 +70,7 @@
   "node"          : true,     // Node.js
   "couch"         : false,    // CouchDB
   "dojo"          : false,    // Dojo Toolkit
-  "jquery"        : false,    // jQuery
+  "jquery"        : true,    // jQuery
   "mootools"      : false,    // MooTools
   "nonstandard"   : true,     // Widely adopted globals (escape, unescape, etc)
   "prototypejs"   : false,    // Prototype and Scriptaculous
