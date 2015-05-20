@@ -8,7 +8,7 @@ use Nette\Mail\SendmailMailer;
 * Before sending email making sure:
 *
 * 1. It is POST
-* 2. Files numbers and size limits check
+* 2. Files limit check
 * 3. Existance of required information
 */
 
@@ -34,13 +34,14 @@ $body .= "REQUEST_URI: " . $_SERVER["REQUEST_URI"] . "\r\n";
 $method = $_SERVER['REQUEST_METHOD'];
 
 $files = $_FILES['uploads'];
+$ifFilesPassed = TRUE;
 
 if ( $files ) {
 
   var_dump($files);
 }
 
-if ($name && $from && $method === 'POST' && FALSE) {
+if ($name && $from && $method === 'POST' && $ifFilesPassed) {
 
   $mail = new Message;
   $mail->setFrom($from)
