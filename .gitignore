@@ -1,9 +1,5 @@
 node_modules
 dist
-.tmp
-.sass-cache
-.DS_Store
 bower_components
 secret.yml
-composer.lock
 vendor
