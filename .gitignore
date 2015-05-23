@@ -3,3 +3,5 @@ dist
 bower_components
 secret.yml
 vendor
+graphics
+logs

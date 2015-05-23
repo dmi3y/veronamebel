@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "dependencies": {},
   "devDependencies": {
+    "del": "^1.2.0",
     "gulp": "^3.8.11",
     "gulp-concat": "^2.5.2",
     "gulp-copy": "0.0.2",
@@ -10,8 +11,12 @@
     "gulp-jshint": "^1.10.0",
     "gulp-load-plugins": "^0.10.0",
     "gulp-sourcemaps": "^1.5.2",
+    "gulp-ssh": "^0.3.3",
     "gulp-stylus": "^2.0.2",
-    "jshint-stylish": "0.1.4"
+    "gulp-uglify": "^1.2.0",
+    "js-yaml": "^3.3.1",
+    "jshint-stylish": "0.1.4",
+    "run-sequence": "^1.1.0"
   },
   "engines": {
     "node": ">=0.10.0"

@@ -1,5 +1,5 @@
 <?php
-require '../vendor/autoload.php';
+require './autoload.php';
 
 use Nette\Mail\Message;
 use Nette\Mail\SendmailMailer;
