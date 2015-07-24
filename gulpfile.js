@@ -77,6 +77,15 @@ gulp.task('build', function(cb) {
 
 gulp.task('default', ['build']);
 
+// Watch
+gulp.task('watch', ['build'], function() {
+
+  gulp.watch(['./app/jade/*'], ['templates']);
+  gulp.watch(['./app/scripts/*'], ['scripts']);
+  gulp.watch(['./app/styles/*'], ['styles']);
+  gulp.watch(['./app/mail/*'], ['mail']);
+});
+
 //Deploy//
 var fs = require('fs');
 var yaml = require('js-yaml');
