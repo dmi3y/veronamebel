@@ -2,7 +2,7 @@
   "name": "veronamebel",
   "version": "0.0.1",
   "dependencies": {
-    "jquery": "~1.11"
+    "jquery": "2.2.2"
   },
   "devDependencies": {}
 }
