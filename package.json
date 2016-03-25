@@ -1,6 +1,6 @@
 {
   "name": "veronamebel",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "dependencies": {},
   "scripts": {
     "compile-templates": "jade -O ./tasks/template-options.json -o ./build/ ./src/jade/*.jade",
