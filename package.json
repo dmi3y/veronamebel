@@ -4,7 +4,9 @@
   "dependencies": {},
   "scripts": {
     "compile-templates": "jade -O ./tasks/template-options.json -o ./build/ ./src/jade/*.jade",
+    "watch-templates": "jade -w -O ./tasks/template-options.json -o ./build/ ./src/jade/*.jade",
     "compile-styles": "stylus --compress -o ./build/ ./src/stylus/main.styl",
+    "watch-styles": "stylus -w --compress -o ./build/ ./src/stylus/main.styl",
     "compile-scripts": "cat ./bower_components/jquery/dist/jquery.slim.js ./src/scripts/* > ./build/main.js"
   },
   "devDependencies": {
