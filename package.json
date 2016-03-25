@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "dependencies": {},
   "scripts": {
-    "compile-templates": "jade -O ./tasks/template-options.json -o ./build/ ./app/jade/*.jade",
-    "compile-styles": "stylus --compress -o ./build/ ./app/stylus/main.styl",
-    "compile-scripts": "cat ./bower_components/jquery/dist/jquery.slim.js ./app/scripts/* > ./build/main.js"
+    "compile-templates": "jade -O ./tasks/template-options.json -o ./build/ ./src/jade/*.jade",
+    "compile-styles": "stylus --compress -o ./build/ ./src/stylus/main.styl",
+    "compile-scripts": "cat ./bower_components/jquery/dist/jquery.slim.js ./src/scripts/* > ./build/main.js"
   },
   "devDependencies": {
     "jade": "1.11.0",
