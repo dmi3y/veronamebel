@@ -1,14 +1,13 @@
 {
   "name": "veronamebel",
   "version": "2.0.0",
-  "dependencies": {},
   "scripts": {
-    "compile-templates": "jade -O ./tasks/template-options.json -o ./build/ ./src/jade/*.jade",
-    "watch-templates": "jade -w -O ./tasks/template-options.json -o ./build/ ./src/jade/*.jade",
-    "compile-styles": "stylus --compress -o ./build/ ./src/stylus/main.styl",
-    "watch-styles": "stylus -w --compress -o ./build/ ./src/stylus/main.styl",
+    "compile-templates": "./tasks/compile-templates.sh",
+    "watch-templates": "npm run compile-templates -- -w",
+    "compile-styles": "./tasks/compile-styles.sh",
+    "watch-styles": "npm run compile-styles -- -w",
     "compile-scripts": "cat ./bower_components/jquery/dist/jquery.slim.js ./src/scripts/* > ./build/main.js",
-    "compile": "npm run compile-templates ; npm run compile-styles #; npm run compile-scripts",
+    "compile": "npm run compile-templates ; npm run compile-styles --compress #; npm run compile-scripts",
     "clean-build": "rm -rf ./build/",
     "build": "npm run clean-build && npm run compile",
     "surge": "surge ./build/ veronamebel.surge.sh",
@@ -18,8 +17,5 @@
     "jade": "1.11.0",
     "jstransformer-markdown-it": "0.2.2",
     "stylus": "0.54.2"
-  },
-  "engines": {
-    "node": ">=0.10.0"
   }
 }
