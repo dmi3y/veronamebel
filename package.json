@@ -1,6 +1,6 @@
 {
   "name": "veronamebel",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "dependencies": {},
   "devDependencies": {
     "del": "^1.2.0",
