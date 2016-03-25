@@ -2,21 +2,15 @@
   "name": "veronamebel",
   "version": "1.0.0",
   "dependencies": {},
+  "scripts": {
+    "compile-templates": "jade -O ./tasks/template-options.json -o ./build/ ./app/jade/*.jade",
+    "compile-styles": "stylus --compress -o ./build/ ./app/stylus/main.styl",
+    "compile-scripts": "cat ./bower_components/jquery/dist/jquery.slim.js ./app/scripts/* > ./build/main.js"
+  },
   "devDependencies": {
-    "del": "^1.2.0",
-    "gulp": "^3.8.11",
-    "gulp-concat": "^2.5.2",
-    "gulp-copy": "0.0.2",
-    "gulp-jade": "^1.0.1",
-    "gulp-jshint": "^1.10.0",
-    "gulp-load-plugins": "^0.10.0",
-    "gulp-sourcemaps": "^1.5.2",
-    "gulp-ssh": "^0.3.3",
-    "gulp-stylus": "^2.0.2",
-    "gulp-uglify": "^1.2.0",
-    "js-yaml": "^3.3.1",
-    "jshint-stylish": "0.1.4",
-    "run-sequence": "^1.1.0"
+    "jade": "1.11.0",
+    "jstransformer-markdown-it": "0.2.2",
+    "stylus": "0.54.2"
   },
   "engines": {
     "node": ">=0.10.0"
