@@ -7,7 +7,12 @@
     "watch-templates": "jade -w -O ./tasks/template-options.json -o ./build/ ./src/jade/*.jade",
     "compile-styles": "stylus --compress -o ./build/ ./src/stylus/main.styl",
     "watch-styles": "stylus -w --compress -o ./build/ ./src/stylus/main.styl",
-    "compile-scripts": "cat ./bower_components/jquery/dist/jquery.slim.js ./src/scripts/* > ./build/main.js"
+    "compile-scripts": "cat ./bower_components/jquery/dist/jquery.slim.js ./src/scripts/* > ./build/main.js",
+    "compile": "npm run compile-templates ; npm run compile-styles #; npm run compile-scripts",
+    "clean-build": "rm -rf ./build/",
+    "build": "npm run clean-build && npm run compile",
+    "surge": "surge ./build/ veronamebel.surge.sh",
+    "deploy": "npm run build && npm run surge"
   },
   "devDependencies": {
     "jade": "1.11.0",
