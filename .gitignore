@@ -1,7 +1,5 @@
 node_modules
-dist
+build
 bower_components
-secret.yml
-vendor
-graphics
 logs
+
