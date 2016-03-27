@@ -1,3 +1,3 @@
 # veronamebel
 
-> Yup! http://veronamebel.surge.sh/
+> Yup! http://verona-mebel.com
