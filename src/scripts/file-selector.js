@@ -1,19 +1,16 @@
-jQuery(function($) {
+/*global jQuery*/
+jQuery(function ($) {
+  'use strict'
+  $('input:file').change(function () {
+    var files = this.files
+    var flen = files.lengt
+    var fCont = $(this).next('span')
 
-	$('input:file').change(function() {
-		var
-			files = this.files,
-			flen = files.length,
-      fCont = $(this).next('span');
-
-    fCont.empty();
+    fCont.empty()
 
     while (flen--) {
-
       fCont
-        .append('<b title="' + files[flen].name + '"></b>');
-		}
-
-	});
-
-});
+        .append('<b title="' + files[flen].name + '"></b>')
+    }
+  })
+})

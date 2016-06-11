@@ -1,10 +1,15 @@
 {
   "maplink": "https://maps.google.com/maps?expflags=enable_star_based_justifications:true&ie=UTF8&cid=17452686713591379491&q=Verona+%D0%9C%D0%B5%D0%B1%D0%B5%D0%BB%D1%8C&iwloc=A",
   "mapsrc": "http://maps.googleapis.com/maps/api/staticmap?center=42.85925,74.61671&markers=color:0xff11ff|label:VM|42.85910,74.62180&zoom=15&size=640x300&maptype=roadmap",
-  "address": "г. Бишкек Октябрьский р-он, улица Кулатова 2",
+  "address": "г. Бишкек Октябрьский район, улица Кулатова 2",
   "phone": {
     "mobile": "(555) 68 45 68",
     "work": "(312) 89 58 89"
   },
-  "analytics": "(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-75641722-1', 'auto');ga('send', 'pageview');"
+  "analytics": "(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-75641722-1', 'auto');ga('send', 'pageview');",
+  "walpaperUrls": [
+    "http://mickricereto.files.wordpress.com/2012/09/3_siematic-s3-graphite-grey_lotus-white.jpg",
+    "http://shkafi-kupe.by/intereri/2012/may/04/barnaya_stoika.jpg",
+    "http://www.adresmebel.ru/assets/images/MICHELANGELO2%20I.jpg"
+  ]
 }
