@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "scripts": {
     "jphelp": "jpegoptim --help",
-    "copy-wallpaper": "mkdir -p ./build && jpegoptim -d ./build -S 200 ./graphics/2.jpg",
+    "copy-wallpaper": "mkdir -p ./build && jpegoptim -d ./build -S 500 ./graphics/2.jpg",
     "compile-templates": "./tasks/compile-templates.sh",
     "watch-templates": "npm run compile-templates -- -w",
     "compile-styles": "./tasks/compile-styles.sh",
