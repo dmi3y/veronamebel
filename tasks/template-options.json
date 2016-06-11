@@ -11,5 +11,7 @@
     "http://mickricereto.files.wordpress.com/2012/09/3_siematic-s3-graphite-grey_lotus-white.jpg",
     "http://shkafi-kupe.by/intereri/2012/may/04/barnaya_stoika.jpg",
     "http://www.adresmebel.ru/assets/images/MICHELANGELO2%20I.jpg"
-  ]
+  ],
+  "metrika": "(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter37859820 = new Ya.Metrika({ id:37859820, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName(\"script\")[0], s = d.createElement(\"script\"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = \"text/javascript\"; s.async = true; s.src = \"https://mc.yandex.ru/metrika/watch.js\"; if (w.opera == \"[object Opera]\") { d.addEventListener(\"DOMContentLoaded\", f, false); } else { f(); } })(document, window, \"yandex_metrika_callbacks\");",
+  "metrika_no_script": "<noscript><div><img src=\"https://mc.yandex.ru/watch/37859820\" style=\"position:absolute; left:-9999px;\" alt=\"\" /></div></noscript>"
 }
