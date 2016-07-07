@@ -18,3 +18,8 @@ html(lang="en")
         section
           block content
         include default-partials/_footer
+    //- script(src='main.js')
+    script #{analytics}
+    script !{metrika}
+    !{metrika_no_script}
+    script(src='#{addthis_url}')
