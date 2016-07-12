@@ -22,4 +22,7 @@ html(lang="en")
     script #{analytics}
     script !{metrika}
     !{metrika_no_script}
+    script(type='text/javascript').
+      var addthis_config = addthis_config||{};
+      addthis_config.lang = 'ru';
     script(src='#{addthis_url}')
