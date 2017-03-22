@@ -1,7 +1,7 @@
 extends ./layouts/_default
 
 block content
-  div
+  div#about
     :markdown-it
       **ЧП Верона Мебель** предоставляет услуги по изготовлению корпусной мебели.
 
@@ -27,3 +27,7 @@ block content
 
     a(href=maplink)
       img.roadmap(src=mapsrc)
+  div#certificates.certificates
+    img.cert(src=certsrcs.one)
+    img.cert(src=certsrcs.two)
+    img.cert(src=certsrcs.three)

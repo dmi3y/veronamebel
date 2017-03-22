@@ -6,7 +6,6 @@ body
     padding 0
     margin 0
     height 100%
-    font-size 18px
 
 a
     color colorLinks
@@ -38,7 +37,20 @@ section
         transparerentBG()
         padding 15px
 
+        &:target
+            animation-name flash
+            animation-duration 1s
+
 .roadmap
     display block
     margin 20px auto
     max-width 100%
+
+.certificates
+  text-align center
+.cert
+  width 32%
+  margin-left 1%
+
+  &:first-child
+    margin-left 0

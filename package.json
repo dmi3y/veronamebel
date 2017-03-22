@@ -9,15 +9,17 @@
     "compile-styles": "./tasks/compile-styles.sh",
     "watch-styles": "npm run compile-styles -- -w",
     "compile-scripts": "cat ./bower_components/jquery/dist/jquery.slim.js ./src/scripts/* > ./build/main.js",
-    "compile": "npm run compile-templates ; npm run compile-styles --compress #; npm run compile-scripts",
+    "develop": "npm run watch-templates & npm run watch-styles & live-server ./build",
+    "compile": "npm run compile-templates & npm run compile-styles --compress #& npm run compile-scripts",
     "clean-build": "rm -rf ./build/",
-    "build": "npm run clean-build && npm run compile ; npm run copy-wallpaper",
+    "build": "npm run clean-build && npm run compile & npm run copy-wallpaper",
     "surge": "surge ./build/ verona-mebel.com",
     "deploy": "npm run build && npm run surge"
   },
   "devDependencies": {
     "jade": "1.11.0",
     "jstransformer-markdown-it": "0.2.2",
+    "live-server": "1.2.0",
     "stylus": "0.54.2"
   },
   "dependencies": {
