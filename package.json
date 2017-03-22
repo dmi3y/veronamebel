@@ -23,6 +23,7 @@
     "stylus": "0.54.2"
   },
   "dependencies": {
-    "jpegoptim-bin": "3.0.0"
+    "jpegoptim-bin": "3.0.0",
+    "surge": "^0.19.0"
   }
 }
