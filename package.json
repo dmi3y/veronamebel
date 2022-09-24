@@ -2,7 +2,7 @@
   "name": "veronamebel",
   "version": "3.0.0",
   "scripts": {
-    "copy-wallpaper": "mkdir -p ./public && jpegoptim -d ./public -S 500 ./graphics/1.jpg",
+    "copy-wallpaper": "mkdir -p ./public && jpegoptim -d ./public -S 500 ./graphics/*.jpg",
     "compile-templates": "./tasks/compile-templates.sh",
     "watch-templates": "npm run compile-templates -- -w",
     "compile-styles": "./tasks/compile-styles.sh",
