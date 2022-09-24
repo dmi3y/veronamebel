@@ -1,5 +1,5 @@
-#!/usr/bin/env bash -x
+#!/usr/bin/env bash
 
 echo "$@"
 
-stylus "$@" -o ./build/ ./src/stylus/main.styl
+stylus "$@" -o ./public/ ./src/stylus/main.styl

@@ -1,3 +1,3 @@
-#!/usr/bin/env bash -x
+#!/usr/bin/env bash
 
-jade "$@" -O ./tasks/template-options.json -o ./build/ ./src/jade/*.jade
+jade "$@" -O ./tasks/template-options.json -o ./public/ ./src/jade/*.jade
