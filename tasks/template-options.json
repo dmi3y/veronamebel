@@ -1,6 +1,6 @@
 {
   "maplink": "https://maps.google.com/maps?expflags=enable_star_based_justifications:true&ie=UTF8&cid=17452686713591379491&q=Verona+%D0%9C%D0%B5%D0%B1%D0%B5%D0%BB%D1%8C&iwloc=A",
-  "mapsrc": "http://maps.googleapis.com/maps/api/staticmap?center=42.85925,74.61671&markers=color:0xff11ff|label:VM|42.85910,74.62180&zoom=15&size=640x300&maptype=roadmap&key=AIzaSyAyAg1_pM-lBrHrLElNyozvSUK5qWwsJB8",
+  "mapsrc": "https://maps.googleapis.com/maps/api/staticmap?center=42.85925,74.61671&markers=color:0xff11ff|label:VM|42.85910,74.62180&zoom=15&size=640x300&maptype=roadmap&map_id=798e4870bdbaa618&key=AIzaSyAyAg1_pM-lBrHrLElNyozvSUK5qWwsJB8",
   "address": "г. Бишкек Октябрьский район, улица Кулатова 1/1a 1 этаж",
   "phone": {
     "mobile": "(555) 68 45 68"
