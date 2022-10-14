@@ -1,8 +1,25 @@
 footer
-  #contacts.contacts
-    :markdown-it
-      Пишите нам [verona.mebel@gmail.com](mailto:verona.mebel@gmail.com), оставляйте заказы, задавайте вопросы
-
-      наш инстаграм [verona_mebel_kg](https://www.instagram.com/verona_mebel_kg)
+  section(itemscope itemtype="http://schema.org/Organization")#contacts.contacts
     p.
-      звоните т.  <a href="tel:#{phone.src}">#{phone.mobile}</a>
+      Пишите нам <a href="mailto:verona.mebel@gmail.com">
+        <span itemprop="email">verona.mebel@gmail.com</span>
+      </a>, оставляйте заказы, задавайте вопросы
+    
+    p.
+      наш инстаграм <a href="https://www.instagram.com/verona_mebel_kg">
+        verona_mebel_kg
+      </a>
+
+    p.
+      звоните т. <a href="tel:#{phone.src}">
+        <span itemprop="telephone">#{phone.mobile}</span>
+      </a>
+
+    span(itemprop="name").
+      Верона Мебель
+    span.
+      &nbsp;|&nbsp;
+    span(itemprop="address").
+      #{address}
+
+
