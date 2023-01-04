@@ -1,23 +1,22 @@
 {
-  "name": "veronamebel",
-  "version": "3.0.0",
+  "name": "@example/basics",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "copy-wallpaper": "mkdir -p ./public && jpegoptim -d ./public -S 500 ./graphics/*.jpg",
-    "compile-templates": "./tasks/compile-templates.sh",
-    "watch-templates": "npm run compile-templates -- -w",
-    "compile-styles": "./tasks/compile-styles.sh",
-    "watch-styles": "npm run compile-styles -- -w",
-    "compile": "npm run compile-templates & npm run compile-styles --compress",
-    "clean-build": "rm -rf ./public",
-    "develop": "vercel dev",
-    "build": "npm run clean-build && npm run compile && npm run copy-wallpaper & wait",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
     "deploy": "vercel"
   },
+  "dependencies": {
+    "astro": "^1.9.0"
+  },
   "devDependencies": {
-    "jade": "1.11.0",
-    "jpegoptim-bin": "3.0.0",
-    "jstransformer-markdown-it": "0.2.2",
-    "stylus": "0.59.0",
-    "vercel": "^28.2.5"
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
+    "vercel": "^28.10.2"
   }
 }
