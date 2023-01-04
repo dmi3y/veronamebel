@@ -31,6 +31,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["astro", "npm:1.9.0"],\
             ["autoprefixer", "virtual:37fe566b8f86f7913097d1160afeb3e1b59686c479c9c5d9f7d6e4c754d4e9e5fdb0a386ee9ddf7974a1ec808b9355f5aebc84cd7762178519000e2ae400ddfb#npm:10.4.13"],\
             ["cssnano", "virtual:37fe566b8f86f7913097d1160afeb3e1b59686c479c9c5d9f7d6e4c754d4e9e5fdb0a386ee9ddf7974a1ec808b9355f5aebc84cd7762178519000e2ae400ddfb#npm:5.1.14"],\
+            ["postcss", "npm:8.4.20"],\
             ["vercel", "npm:28.10.2"]\
           ],\
           "linkType": "SOFT"\
@@ -581,6 +582,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["astro", "npm:1.9.0"],\
             ["autoprefixer", "virtual:37fe566b8f86f7913097d1160afeb3e1b59686c479c9c5d9f7d6e4c754d4e9e5fdb0a386ee9ddf7974a1ec808b9355f5aebc84cd7762178519000e2ae400ddfb#npm:10.4.13"],\
             ["cssnano", "virtual:37fe566b8f86f7913097d1160afeb3e1b59686c479c9c5d9f7d6e4c754d4e9e5fdb0a386ee9ddf7974a1ec808b9355f5aebc84cd7762178519000e2ae400ddfb#npm:5.1.14"],\
+            ["postcss", "npm:8.4.20"],\
             ["vercel", "npm:28.10.2"]\
           ],\
           "linkType": "SOFT"\
@@ -1566,7 +1568,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fraction.js", "npm:4.2.0"],\
             ["normalize-range", "npm:0.1.2"],\
             ["picocolors", "npm:1.0.0"],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-value-parser", "npm:4.2.0"]\
           ],\
           "packagePeers": [\
@@ -2154,7 +2156,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["css-declaration-sorter", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:6.3.1"],\
             ["@types/postcss", null],\
-            ["postcss", null]\
+            ["postcss", "npm:8.4.20"]\
           ],\
           "packagePeers": [\
             "@types/postcss",\
@@ -2221,7 +2223,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/postcss", null],\
             ["cssnano-preset-default", "virtual:830da845fbdb2fb9517b336bb73b7eb7402f444fbe9ea3225914543418d6ad97063b8358f6d5b1ef56728d1a7ed64cfc29b9f883ca6ba89762be0fc85f4ec58f#npm:5.2.13"],\
             ["lilconfig", "npm:2.0.6"],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["yaml", "npm:1.10.2"]\
           ],\
           "packagePeers": [\
@@ -2246,7 +2248,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/postcss", null],\
             ["css-declaration-sorter", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:6.3.1"],\
             ["cssnano-utils", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:3.1.0"],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-calc", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:8.2.4"],\
             ["postcss-colormin", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:5.3.0"],\
             ["postcss-convert-values", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:5.1.3"],\
@@ -2295,7 +2297,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["cssnano-utils", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:3.1.0"],\
             ["@types/postcss", null],\
-            ["postcss", null]\
+            ["postcss", "npm:8.4.20"]\
           ],\
           "packagePeers": [\
             "@types/postcss",\
@@ -5993,7 +5995,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["postcss-calc", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:8.2.4"],\
             ["@types/postcss", null],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-selector-parser", "npm:6.0.11"],\
             ["postcss-value-parser", "npm:4.2.0"]\
           ],\
@@ -6020,7 +6022,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["browserslist", "npm:4.21.4"],\
             ["caniuse-api", "npm:3.0.0"],\
             ["colord", "npm:2.9.3"],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-value-parser", "npm:4.2.0"]\
           ],\
           "packagePeers": [\
@@ -6044,7 +6046,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["postcss-convert-values", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:5.1.3"],\
             ["@types/postcss", null],\
             ["browserslist", "npm:4.21.4"],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-value-parser", "npm:4.2.0"]\
           ],\
           "packagePeers": [\
@@ -6067,7 +6069,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["postcss-discard-comments", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:5.1.2"],\
             ["@types/postcss", null],\
-            ["postcss", null]\
+            ["postcss", "npm:8.4.20"]\
           ],\
           "packagePeers": [\
             "@types/postcss",\
@@ -6089,7 +6091,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["postcss-discard-duplicates", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:5.1.0"],\
             ["@types/postcss", null],\
-            ["postcss", null]\
+            ["postcss", "npm:8.4.20"]\
           ],\
           "packagePeers": [\
             "@types/postcss",\
@@ -6111,7 +6113,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["postcss-discard-empty", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:5.1.1"],\
             ["@types/postcss", null],\
-            ["postcss", null]\
+            ["postcss", "npm:8.4.20"]\
           ],\
           "packagePeers": [\
             "@types/postcss",\
@@ -6133,7 +6135,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["postcss-discard-overridden", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:5.1.0"],\
             ["@types/postcss", null],\
-            ["postcss", null]\
+            ["postcss", "npm:8.4.20"]\
           ],\
           "packagePeers": [\
             "@types/postcss",\
@@ -6183,7 +6185,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["postcss-merge-longhand", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:5.1.7"],\
             ["@types/postcss", null],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-value-parser", "npm:4.2.0"],\
             ["stylehacks", "virtual:0ad090bef18d09f3b1e5358b6bdb60476ebbac593ce04d3f7ddec17ad6ae1c6647ad61bdce633afd82cc024f4d433a72d404339934184958cfc0b50f82182edc#npm:5.1.1"]\
           ],\
@@ -6210,7 +6212,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["browserslist", "npm:4.21.4"],\
             ["caniuse-api", "npm:3.0.0"],\
             ["cssnano-utils", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:3.1.0"],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-selector-parser", "npm:6.0.11"]\
           ],\
           "packagePeers": [\
@@ -6233,7 +6235,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["postcss-minify-font-values", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:5.1.0"],\
             ["@types/postcss", null],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-value-parser", "npm:4.2.0"]\
           ],\
           "packagePeers": [\
@@ -6258,7 +6260,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/postcss", null],\
             ["colord", "npm:2.9.3"],\
             ["cssnano-utils", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:3.1.0"],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-value-parser", "npm:4.2.0"]\
           ],\
           "packagePeers": [\
@@ -6283,7 +6285,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/postcss", null],\
             ["browserslist", "npm:4.21.4"],\
             ["cssnano-utils", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:3.1.0"],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-value-parser", "npm:4.2.0"]\
           ],\
           "packagePeers": [\
@@ -6306,7 +6308,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["postcss-minify-selectors", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:5.2.1"],\
             ["@types/postcss", null],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-selector-parser", "npm:6.0.11"]\
           ],\
           "packagePeers": [\
@@ -6329,7 +6331,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["postcss-normalize-charset", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:5.1.0"],\
             ["@types/postcss", null],\
-            ["postcss", null]\
+            ["postcss", "npm:8.4.20"]\
           ],\
           "packagePeers": [\
             "@types/postcss",\
@@ -6351,7 +6353,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["postcss-normalize-display-values", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:5.1.0"],\
             ["@types/postcss", null],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-value-parser", "npm:4.2.0"]\
           ],\
           "packagePeers": [\
@@ -6374,7 +6376,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["postcss-normalize-positions", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:5.1.1"],\
             ["@types/postcss", null],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-value-parser", "npm:4.2.0"]\
           ],\
           "packagePeers": [\
@@ -6397,7 +6399,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["postcss-normalize-repeat-style", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:5.1.1"],\
             ["@types/postcss", null],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-value-parser", "npm:4.2.0"]\
           ],\
           "packagePeers": [\
@@ -6420,7 +6422,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["postcss-normalize-string", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:5.1.0"],\
             ["@types/postcss", null],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-value-parser", "npm:4.2.0"]\
           ],\
           "packagePeers": [\
@@ -6443,7 +6445,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["postcss-normalize-timing-functions", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:5.1.0"],\
             ["@types/postcss", null],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-value-parser", "npm:4.2.0"]\
           ],\
           "packagePeers": [\
@@ -6467,7 +6469,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["postcss-normalize-unicode", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:5.1.1"],\
             ["@types/postcss", null],\
             ["browserslist", "npm:4.21.4"],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-value-parser", "npm:4.2.0"]\
           ],\
           "packagePeers": [\
@@ -6491,7 +6493,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["postcss-normalize-url", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:5.1.0"],\
             ["@types/postcss", null],\
             ["normalize-url", "npm:6.1.0"],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-value-parser", "npm:4.2.0"]\
           ],\
           "packagePeers": [\
@@ -6514,7 +6516,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["postcss-normalize-whitespace", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:5.1.1"],\
             ["@types/postcss", null],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-value-parser", "npm:4.2.0"]\
           ],\
           "packagePeers": [\
@@ -6538,7 +6540,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["postcss-ordered-values", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:5.1.3"],\
             ["@types/postcss", null],\
             ["cssnano-utils", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:3.1.0"],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-value-parser", "npm:4.2.0"]\
           ],\
           "packagePeers": [\
@@ -6563,7 +6565,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/postcss", null],\
             ["browserslist", "npm:4.21.4"],\
             ["caniuse-api", "npm:3.0.0"],\
-            ["postcss", null]\
+            ["postcss", "npm:8.4.20"]\
           ],\
           "packagePeers": [\
             "@types/postcss",\
@@ -6585,7 +6587,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["postcss-reduce-transforms", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:5.1.0"],\
             ["@types/postcss", null],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-value-parser", "npm:4.2.0"]\
           ],\
           "packagePeers": [\
@@ -6619,7 +6621,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["postcss-svgo", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:5.1.0"],\
             ["@types/postcss", null],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-value-parser", "npm:4.2.0"],\
             ["svgo", "npm:2.8.0"]\
           ],\
@@ -6643,7 +6645,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["postcss-unique-selectors", "virtual:5b614b0554c2a1c7a93f5d164fa1d7985c9cf67468cb92f57cad84fe68b392bdd6788530e3b4b2258d68c624919c7e81410fe2b69705dc43b134d40eebbf3b50#npm:5.1.1"],\
             ["@types/postcss", null],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-selector-parser", "npm:6.0.11"]\
           ],\
           "packagePeers": [\
@@ -7589,7 +7591,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["stylehacks", "virtual:0ad090bef18d09f3b1e5358b6bdb60476ebbac593ce04d3f7ddec17ad6ae1c6647ad61bdce633afd82cc024f4d433a72d404339934184958cfc0b50f82182edc#npm:5.1.1"],\
             ["@types/postcss", null],\
             ["browserslist", "npm:4.21.4"],\
-            ["postcss", null],\
+            ["postcss", "npm:8.4.20"],\
             ["postcss-selector-parser", "npm:6.0.11"]\
           ],\
           "packagePeers": [\
