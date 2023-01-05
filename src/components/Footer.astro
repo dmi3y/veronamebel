@@ -1,0 +1,62 @@
+---
+import Map from "../components/Map.astro";
+---
+
+<footer>
+  <section
+    id="contacts"
+    class="contacts"
+    itemscope
+    itemtype="http://schema.org/Organization"
+  >
+    <p>
+      Пишите нам <a href="mailto:verona.mebel@gmail.com">
+        <span itemprop="email">verona.mebel@gmail.com</span>
+      </a>, оставляйте заказы, задавайте вопросы
+    </p>
+    <p>
+      наш инстаграм <a href="https://www.instagram.com/verona_mebel_kg">
+        verona_mebel_kg
+      </a>
+    </p>
+    <p>
+      звоните т. <a href="tel:+996555684568">
+        <span itemprop="telephone">+996 (555) 68 45 68</span>
+      </a>
+    </p>
+    <p>
+      пишите на WhatsApp <a
+        href="https://api.whatsapp.com/send/?phone=996555684568&text=Здравствуйте%2C+у+меня+есть+вопрос"
+        >+996 (555) 68 45 68</a
+      >
+    </p>
+    <Map />
+    <span itemprop="name">Верона Мебель</span>
+    <span>&nbsp;|&nbsp;</span>
+    <span itemprop="address"
+      >Кыргызстан, г. Бишкек Октябрьский район, улица Кулатова 1/1a 1 этаж</span
+    >
+    <p>График работы с 09:00 - до 19:00, воскресенье выходной.</p>
+  </section>
+</footer>
+
+<style>
+  /* Footer */
+  footer {
+    height: 65px;
+    text-align: center;
+  }
+
+  footer > section {
+    background-color: var(--color-bg-opacity);
+  }
+
+  footer > section:target {
+    animation-name: flash;
+    animation-duration: 1s;
+  }
+
+  .contacts {
+    padding: 15px 15px 45px;
+  }
+</style>

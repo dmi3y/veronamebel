@@ -1,0 +1,31 @@
+---
+const certOne =
+  "https://lh3.googleusercontent.com/unr4ppT0GAwWYAo9hT82ep3CivtiTM4Fko7_j0a-QY5T45l_3aPej1T19BGdshxNWhygh2pbHyaQeawJlCIdZmmRF9jlO6fa1naO9TzOX1akdiq0PAp1a4Td-3__19TKVerG66C3-o6ST00CPcuivL2WQkUB7fW6xHdCnJB5PKF8VTkRhY57jCXk-2O8qVDErpnOBhpCKRfsU2jMwk9Hk81L1cBwJkMJSa3TzEQq0Wxcg0z9Rges11O8EsNXEyGtWFdLCXTV9TTvSEu9P_yysIqzaLt-1fXoGcvY_KhgJgU9kUCzj9kKoFMAbdm6f0zqj-PLauAFTjRlCKRmVXAx50IK_kCpEx0EmwOteogeByiJLrIemd6e3ilvj-e7Q08mb8E1kOXeJVbgdgCcLsCXFIQmVLsIwZzEu-_2ERrX-saXa29LDEFDGDqDaPucsjjj4ZApJLjRKGN-T6Qt406W2owux6NwifS6gXFTwv8uR9OJUKM9cEGTSljGKGAC1TvDRKv5_YyhHbHx_eI5EaLr0F2rNnZsfzwXfFzX5-fblRAFfbYEvvfsoG7k9J1lPcbG0vV4XAx834LixLsL1PTYNwV4nV5lbCVNOYsG8bcvtrwT1o71LcDVHeZHhmuiljX3b7Axhzk0yYva506VU1xruv-lWGv6oiwp1sIfZ2OyGRk=w565";
+const certTwo =
+  "https://lh3.googleusercontent.com/TjbP1HHSkfbQei7RuXMC9EpZixKd2noOgrR9XICc-bJmi21tpP3mn6yyZCU_vQN6De5Jt8fHoyOy8ZuH-xwmsTeaTz960lPwA2DfanABN_QyrZy8-YvQHbYC-x7rAGdh7S_gfb6oo5Fdw54f2ybXT4KTpJlLy5gyf24-XOWtRFqGp2-H9p8ix5VzLT0MGkjf4LFAv9LeHpaxxdlyVN10HRBwGKuO_d-qA-VISc-PApPDV1x8cHwkkr5w7UBS4VeuUcwK0VLzXQ9c3VJtFoVzGwc_fNe-5Zu7YozvbhcCWT4AZcMd3m0LX8GcggRMvIlilK7hReX8288QkyVFnpOVNv9-6bb8f2pVCBkznZ_j7OJJlmmQhrfSXNILhTtz1SAVyD3TfovevFMoYDTfh_29f6JXIvu6UTN1jfcb_FI4v2tiq6cfdfmhg657c8REQVR7NgFpAThMTholTKdFtTZCPW8wS9T3MXqPszTrGvdYyu4HCq0c531gSG-bVoT9Xo1EckeE_Tm0pvQ1pcAEz8fTjHCz3slL9O90x1bn2Mf-Bit7qeks80GLgu7aB6-V_xFV7RBaFApE2_H-kAg6BkQaRFWk14MaGb4J1kBM2c0Oo7vpucvEACzwEgl5UmG3zNK_M6mL1O80An8MAhmFSmBrp6xbjRxL2x3iQBRJXEL60Dg=w565";
+const certThree =
+  "https://lh3.googleusercontent.com/RKiIXHsEXrIceiourLkz8wvB3MIgmtNpvLV26EwMo6TNJqsgCGcWTyagTlIOSeYNtXArnXgCVfjxdVDmOGtld7G5GmDXmbILHu0dZHC3cM2KWeFsLV_qHopMRum-Ql0aKoMZzVcSjG-1CBaAxWPBdT8nnMGo4HZH5jV5rlhG0wkmLtl5Bv3kuVKfJChxzkT0ickCE681z_KMJeJGkUAl-13R-pFiMLqM_JiBFCiQqmUAw1da8bd_FIC_PEqAd_ZP_j8jYZ3mO9Ywg_OtEAwQXHdfmBdemh7MXmiLCDKozKkwCihqAkWUKRIj6SGerdgwttiAQWSiMTOLig-LKY3IABS6gA5KdNlC9bzDviHDLudSlNwnbZY9MRDaDggDsAwmLi93FJAcEvQI3afajbUfojraCSJ5xDYyer_njfjx2HHFzjMl4LqU8HYhBovIIzvW74bfFzRAWekicuAGqUAPxkSlUN7XQv2Zn75IeXMt5p9kFvH2DXr8BdR-e8zRMHR9eT2zdTWQKoWPQqMnnLhRUFxOzyjOKHmECDhNH5Tn1LnX2hy5xDXVfrE8pXTpooZnlAfHbJdRhVkGN6u4s0WWHIUzbKuMHHldQpfRU3gzxAT1emPZhcRXvCZRPXoVqvl49J6XTYLUWfOxo58yjthhwLqUJ7y9aG_LsISvwela020=w565";
+---
+
+<div id="certificates" class="certificates slot">
+  <img class="cert" src={certOne} />
+  <img class="cert" src={certTwo} />
+  <img class="cert" src={certThree} />
+</div>
+
+<style>
+  /* Certificates */
+  .certificates {
+    margin: 65px 0;
+    text-align: center;
+  }
+
+  .cert {
+    width: 32%;
+    margin-left: 1%;
+  }
+
+  .cert:first-child {
+    margin-left: 0;
+  }
+</style>
