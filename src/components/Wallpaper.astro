@@ -1,22 +1,25 @@
+---
+import one from "../wallpapers/1.jpg";
+import two from "../wallpapers/2.jpg";
+---
+
 <input type="checkbox" id="show-wallpaper" />
 <label for="show-wallpaper" id="show-wallpaper-lbl"
   >Показать <strong>Модель</strong><b>Сайт</b>
 </label>
 <div id="wallpaper" class="wallpaper">
-  <div
-    data-wallpaper-index="1"
-    style="background-image: url(/src/wallpapers/1.jpg);"
-  >
-  </div>
+  <div data-wallpaper-index="0" data-wallpaper-set={[one, two]}></div>
 </div>
 <script>
   const wallpaper = document.querySelector("#wallpaper div");
-
+  const wallpaperSet = wallpaper.dataset.wallpaperSet.split(",");
   wallpaper.addEventListener("animationiteration", (e) => {
     let n = Number(e.target.dataset.wallpaperIndex);
-    n = n < 2 ? n + 1 : 1;
+    n = n < wallpaperSet.length - 1 ? n + 1 : 0;
+    const newWallpaper = wallpaperSet[n];
+    console.log({ n, newWallpaper });
     e.target.dataset.wallpaperIndex = n;
-    wallpaper.style.backgroundImage = `url(/src/wallpapers/${n}.jpg)`;
+    wallpaper.style.backgroundImage = `url(${newWallpaper})`;
   });
 </script>
 <style is:global>
@@ -24,20 +27,20 @@
 
   @keyframes breath {
     0% {
-      background-size: 100% auto;
+      transform: scale(1) rotate(0);
       opacity: 0;
     }
     10% {
       opacity: 1;
     }
     50% {
-      background-size: 102% auto;
+      transform: scale(1.1) rotate(-1deg);
     }
     95% {
       opacity: 1;
     }
     100% {
-      background-size: 105% auto;
+      transform: scale(1) rotate(1deg);
       opacity: 0;
     }
   }
@@ -76,23 +79,17 @@
 
   .wallpaper {
     background-color: var(--color-bg-opacity-light);
-    position: absolute;
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
     z-index: -10;
   }
   .wallpaper div {
     background-image: url(/src/wallpapers/1.jpg);
-    background-image: url(/src/wallpapers/2.jpg);
-    animation: breath 15s linear infinite;
+    animation: breath 20s linear infinite;
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
     background-attachment: fixed;
-    width: 100%;
     height: 100%;
   }
 </style>
