@@ -1,3 +1,3 @@
 # veronamebel
 
-> Yup! http://verona-mebel.com
+http://verona-mebel.com ♥ https://astro.build

@@ -1,0 +1,163 @@
+---
+import Wallpaper from "../components/Wallpaper.astro";
+import Certificates from "../components/Certificates.astro";
+import Footer from "../components/Footer.astro";
+import TopNav from "../components/TopNav.astro";
+import Header from "../components/Header.astro";
+import Analytics from "../components/Analytics.astro";
+
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="yandex-verification" content="232a4c4f798cce7e" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="author" content="Verona Mebel" />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Alex+Brush"
+    />
+  </head>
+  <body class="page">
+    <main id="main-holder" class="wrapper">
+      <Header />
+      <TopNav />
+      <section>
+        <div id="main" class="slot">
+          <slot />
+        </div>
+      </section>
+
+      <Certificates />
+      <Footer />
+    </main>
+    <Wallpaper />
+    <Analytics />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --color-links: #08fcf8;
+    --color-header: #eee;
+    --color-header-news: #999;
+    --color-header-text: #999;
+    --color-flash: #fff;
+    --color-flash-opacity: rgba(255, 255, 255, 0.9);
+    --color-bg: #000;
+    --color-bg-opacity: rgba(0, 0, 0, 0.4);
+
+    --width-page: 955px;
+    --width-main-column: 650px;
+
+    --font-family-main: Verdana, Geneva, sans-serif;
+    --font-size-main: 18px;
+
+    background-color: var(--color-bg-opacity);
+  }
+  .clr {
+    clear: both;
+  }
+
+  @keyframes flash {
+    from {
+      background-color: var(--color-flash-opacity);
+    }
+  }
+
+  html,
+  body {
+    font-family: var(--font-family-main);
+    font-size: var(--font-size-main);
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
+
+  a {
+    color: var(--color-links);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Layout */
+  .wrapper {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 900px;
+    min-height: 100%;
+  }
+
+  .slot {
+    background-color: var(--color-bg-opacity);
+    padding: 15px;
+  }
+
+  .slot:target {
+    animation-name: flash;
+    animation-duration: 1s;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .menu {
+      margin-top: 50px;
+    }
+    .menu li {
+      font-size: 1.3em;
+    }
+    .cert {
+      width: 40%;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .menu li {
+      font-size: 1.2em;
+    }
+    #show-wallpaper,
+    #show-wallpaper-lbl {
+      display: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .wrapper {
+      width: 99%;
+    }
+
+    header h1 {
+      font-size: 150%;
+      text-align: center;
+    }
+
+    .menu li {
+      float: none;
+      width: 100%;
+    }
+
+    .cert {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+</style>

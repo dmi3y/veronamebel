@@ -1,0 +1,55 @@
+<input type="checkbox" id="show-wallpaper" />
+<label for="show-wallpaper" id="show-wallpaper-lbl"
+  >Показать <strong>Модель</strong><b>Сайт</b>
+</label>
+<div class="wallpaper"></div>
+<style is:global>
+  /* Wallpaper */
+  #show-wallpaper {
+    display: none;
+  }
+
+  #show-wallpaper:checked + #show-wallpaper-lbl b {
+    display: inline;
+  }
+
+  #show-wallpaper:checked + #show-wallpaper-lbl strong {
+    display: none;
+  }
+
+  #show-wallpaper-lbl {
+    background-color: var(--color-bg-opacity);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    cursor: pointer;
+  }
+
+  #main-holder:has(~ #show-wallpaper:checked) {
+    display: none;
+  }
+
+  #main-holder:has(~ #show-wallpaper-lbl:hover) {
+    opacity: 0.4;
+  }
+
+  #show-wallpaper-lbl b {
+    display: none;
+  }
+
+  .wallpaper {
+    background-image: url(/src/wallpapers/1.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+  }
+</style>
