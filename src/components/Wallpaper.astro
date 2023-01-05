@@ -2,9 +2,45 @@
 <label for="show-wallpaper" id="show-wallpaper-lbl"
   >Показать <strong>Модель</strong><b>Сайт</b>
 </label>
-<div class="wallpaper"></div>
+<div id="wallpaper" class="wallpaper">
+  <div
+    data-wallpaper-index="1"
+    style="background-image: url(/src/wallpapers/1.jpg);"
+  >
+  </div>
+</div>
+<script>
+  const wallpaper = document.querySelector("#wallpaper div");
+
+  wallpaper.addEventListener("animationiteration", (e) => {
+    let n = Number(e.target.dataset.wallpaperIndex);
+    n = n < 2 ? n + 1 : 1;
+    e.target.dataset.wallpaperIndex = n;
+    wallpaper.style.backgroundImage = `url(/src/wallpapers/${n}.jpg)`;
+  });
+</script>
 <style is:global>
   /* Wallpaper */
+
+  @keyframes breath {
+    0% {
+      background-size: 100% auto;
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    50% {
+      background-size: 102% auto;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      background-size: 105% auto;
+      opacity: 0;
+    }
+  }
   #show-wallpaper {
     display: none;
   }
@@ -33,17 +69,13 @@
   #main-holder:has(~ #show-wallpaper-lbl:hover) {
     opacity: 0.4;
   }
-
+  /*  */
   #show-wallpaper-lbl b {
     display: none;
   }
 
   .wallpaper {
-    background-image: url(/src/wallpapers/1.jpg);
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: var(--color-bg-opacity-light);
     position: absolute;
     position: fixed;
     top: 0;
@@ -51,5 +83,14 @@
     bottom: 0;
     left: 0;
     z-index: -10;
+  }
+  .wallpaper div {
+    animation: breath 15s linear infinite;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
   }
 </style>
