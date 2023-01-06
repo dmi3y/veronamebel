@@ -8,39 +8,28 @@ const wallpapers = wallpaperRefs.map((wallpaper) => wallpaper.default);
   >Показать <strong>Модель</strong><b>Сайт</b>
 </label>
 <div id="wallpaper" class="wallpaper">
-  <div data-wallpaper-index="0" data-wallpaper-set={wallpapers}></div>
+  <div
+    data-wallpaper-index="0"
+    data-wallpaper-set={wallpapers}
+    style={`background-image: url(${wallpapers[0]})`}
+  >
+  </div>
 </div>
 <script>
-  const wallpaper = document.querySelector("#wallpaper div");
+  const wallpaper = document.querySelector("#wallpaper div") as HTMLElement;
   const wallpaperSet = wallpaper.dataset.wallpaperSet.split(",");
   wallpaper.addEventListener("animationiteration", (e) => {
-    let n = Number(e.target.dataset.wallpaperIndex);
+    const target = e.target as HTMLElement;
+    let n = Number(target.dataset.wallpaperIndex);
     n = n < wallpaperSet.length - 1 ? n + 1 : 0;
     const newWallpaper = wallpaperSet[n];
     console.log({ n, newWallpaper });
-    e.target.dataset.wallpaperIndex = n;
+    target.dataset.wallpaperIndex = String(n);
     wallpaper.style.backgroundImage = `url(${newWallpaper})`;
   });
 </script>
 <style is:global>
   /* Wallpaper */
-
-  @keyframes breath {
-    0% {
-      transform: scale(1);
-      opacity: 0;
-    }
-    10% {
-      opacity: 1;
-    }
-    95% {
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1.1);
-      opacity: 0;
-    }
-  }
   #show-wallpaper {
     display: none;
   }
@@ -81,8 +70,8 @@ const wallpapers = wallpaperRefs.map((wallpaper) => wallpaper.default);
     z-index: -10;
   }
   .wallpaper div {
-    background-image: url(/src/wallpapers/1.jpg);
-    animation: breath 20s linear infinite;
+    animation: var(--wallpaper-animation-name)
+      var(--wallpaper-animation-duration) linear infinite;
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;

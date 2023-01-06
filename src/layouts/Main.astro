@@ -15,7 +15,7 @@ const { title, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="ru-RU">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="yandex-verification" content="232a4c4f798cce7e" />
@@ -38,10 +38,8 @@ const { title, description } = Astro.props;
     <main id="main-holder" class="wrapper">
       <Header />
       <TopNav />
-      <section>
-        <div id="main" class="slot">
-          <slot />
-        </div>
+      <section id="main" class="slot">
+        <slot />
       </section>
       <Certificates />
       <Footer />
@@ -51,11 +49,41 @@ const { title, description } = Astro.props;
 </html>
 
 <style is:global>
+  @keyframes flash {
+    from {
+      background-color: var(--flash-color-opacity);
+    }
+  }
+
+  @keyframes breath {
+    0% {
+      transform: scale(1);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.1);
+      opacity: 0;
+    }
+  }
   :root {
     --layout-width: 1100px;
+    --layout-break-medium: 1024px;
+    --layout-break-small: 800px;
+    --layout-break-tiny: 600px;
 
     --flash-color: #fff;
     --flash-color-opacity: rgba(255, 255, 255, 0.9);
+    --flash-animation-duration: 1s;
+    --flash-animation-name: flash;
+
+    --wallpaper-animation-duration: 15s;
+    --wallpaper-animation-name: breath;
 
     --bg-color: #000;
     --bg-color-opacity: rgba(0, 0, 0, 0.7);
@@ -69,12 +97,6 @@ const { title, description } = Astro.props;
   }
   .clr {
     clear: both;
-  }
-
-  @keyframes flash {
-    from {
-      background-color: var(--flash-color-opacity);
-    }
   }
 
   html,
@@ -110,12 +132,12 @@ const { title, description } = Astro.props;
   }
 
   .slot:target {
-    animation-name: flash;
-    animation-duration: 1s;
+    animation: var(--flash-animation-name);
+    animation-duration: var(--flash-animation-duration);
   }
 
   /* Responsive */
-  @media (max-width: 1024px) {
+  @media (max-width: var(--layout-break)) {
     .menu {
       margin-top: 50px;
     }
@@ -127,7 +149,7 @@ const { title, description } = Astro.props;
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: var(--layout-break-small)) {
     .menu li {
       font-size: 1.2em;
     }
@@ -137,7 +159,7 @@ const { title, description } = Astro.props;
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: var(--layout-break-tiny)) {
     .wrapper {
       width: 99%;
     }
