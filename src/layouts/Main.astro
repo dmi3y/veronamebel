@@ -52,21 +52,20 @@ const { title, description } = Astro.props;
 
 <style is:global>
   :root {
-    --color-links: #08fcf8;
-    --color-header: #eee;
-    --color-header-news: #999;
-    --color-header-text: #999;
-    --color-flash: #fff;
-    --color-flash-opacity: rgba(255, 255, 255, 0.9);
-    --color-bg: #000;
-    --color-bg-opacity: rgba(0, 0, 0, 0.7);
-    --color-bg-opacity-light: rgba(0, 0, 0, 0.1);
+    --layout-width: 1100px;
 
-    --width-page: 955px;
-    --width-main-column: 650px;
+    --flash-color: #fff;
+    --flash-color-opacity: rgba(255, 255, 255, 0.9);
+
+    --bg-color: #000;
+    --bg-color-opacity: rgba(0, 0, 0, 0.7);
+    --bg-color-opacity-light: rgba(0, 0, 0, 0.1);
 
     --font-family-main: Verdana, Geneva, sans-serif;
     --font-size-main: 18px;
+    --font-color: #fff;
+
+    --link-color: #08fcf8;
   }
   .clr {
     clear: both;
@@ -74,7 +73,7 @@ const { title, description } = Astro.props;
 
   @keyframes flash {
     from {
-      background-color: var(--color-flash-opacity);
+      background-color: var(--flash-color-opacity);
     }
   }
 
@@ -82,14 +81,14 @@ const { title, description } = Astro.props;
   body {
     font-family: var(--font-family-main);
     font-size: var(--font-size-main);
-    color: #fff;
+    color: var(--font-color);
     padding: 0;
     margin: 0;
     height: 100%;
   }
 
   a {
-    color: var(--color-links);
+    color: var(--link-color);
     text-decoration: none;
   }
 
@@ -101,12 +100,12 @@ const { title, description } = Astro.props;
   .wrapper {
     margin: 0 auto;
     width: 80%;
-    max-width: 1100px;
+    max-width: var(--layout-width);
     min-height: 100%;
   }
 
   .slot {
-    background-color: var(--color-bg-opacity);
+    background-color: var(--bg-color-opacity);
     padding: 15px;
   }
 

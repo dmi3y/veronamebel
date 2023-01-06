@@ -1,6 +1,6 @@
 ---
-import one from "../wallpapers/1.jpg";
-import two from "../wallpapers/2.jpg";
+const wallpaperRefs = await Astro.glob("../wallpapers/*.jpg");
+const wallpapers = wallpaperRefs.map((wallpaper) => wallpaper.default);
 ---
 
 <input type="checkbox" id="show-wallpaper" />
@@ -8,7 +8,7 @@ import two from "../wallpapers/2.jpg";
   >Показать <strong>Модель</strong><b>Сайт</b>
 </label>
 <div id="wallpaper" class="wallpaper">
-  <div data-wallpaper-index="0" data-wallpaper-set={[one, two]}></div>
+  <div data-wallpaper-index="0" data-wallpaper-set={wallpapers}></div>
 </div>
 <script>
   const wallpaper = document.querySelector("#wallpaper div");
@@ -54,7 +54,7 @@ import two from "../wallpapers/2.jpg";
   }
 
   #show-wallpaper-lbl {
-    background-color: var(--color-bg-opacity);
+    background-color: var(--bg-color-opacity);
     position: fixed;
     top: 0;
     left: 0;
@@ -75,7 +75,7 @@ import two from "../wallpapers/2.jpg";
   }
 
   .wallpaper {
-    background-color: var(--color-bg-opacity-light);
+    background-color: var(--bg-color-opacity-light);
     position: fixed;
     inset: 0;
     z-index: -10;
