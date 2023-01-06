@@ -151,10 +151,6 @@ const { title, description } = Astro.props;
       font-size: 1.2em;
       margin: 0 0 1px 0;
     }
-    #show-wallpaper,
-    #show-wallpaper-lbl {
-      display: none;
-    }
   }
 
   @media (max-width: 600px) {
@@ -175,6 +171,22 @@ const { title, description } = Astro.props;
     .cert {
       width: 100%;
       margin-left: 0;
+    }
+
+    header {
+      margin-top: 85px;
+    }
+
+    #show-wallpaper-lbl {
+      width: 100%;
+    }
+    #show-wallpaper-lbl > div {
+      padding: 12px;
+      margin: 1px 2px;
+    }
+
+    #main-holder:has(~ #show-wallpaper-lbl:hover) {
+      opacity: 1;
     }
   }
 </style>

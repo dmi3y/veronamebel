@@ -5,7 +5,7 @@ const wallpapers = wallpaperRefs.map((wallpaper) => wallpaper.default);
 
 <input type="checkbox" id="show-wallpaper" />
 <label for="show-wallpaper" id="show-wallpaper-lbl"
-  >Показать <strong>Модель</strong><b>Сайт</b>
+  ><div>Показать <strong>Модель</strong><b>Сайт</b></div>
 </label>
 <div id="wallpaper" class="wallpaper">
   <div
@@ -43,12 +43,15 @@ const wallpapers = wallpaperRefs.map((wallpaper) => wallpaper.default);
   }
 
   #show-wallpaper-lbl {
-    background-color: var(--bg-color-opacity);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 30;
     cursor: pointer;
+  }
+
+  #show-wallpaper-lbl div {
+    background-color: var(--bg-color-opacity);
   }
 
   #main-holder:has(~ #show-wallpaper:checked) {
@@ -58,7 +61,7 @@ const wallpapers = wallpaperRefs.map((wallpaper) => wallpaper.default);
   #main-holder:has(~ #show-wallpaper-lbl:hover) {
     opacity: 0.4;
   }
-  /*  */
+
   #show-wallpaper-lbl b {
     display: none;
   }
