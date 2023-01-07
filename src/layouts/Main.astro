@@ -34,6 +34,7 @@ const { frontmatter } = Astro.props;
   </head>
   <body class="page">
     <Analytics />
+    <Wallpaper />
     <main id="main-holder" class="wrapper">
       <Header />
       <TopNav />
@@ -43,7 +44,6 @@ const { frontmatter } = Astro.props;
       <Certificates />
       <Footer />
     </main>
-    <Wallpaper />
   </body>
 </html>
 
@@ -191,7 +191,7 @@ const { frontmatter } = Astro.props;
       margin: 1px 2px;
     }
 
-    #main-holder:has(~ #show-wallpaper-lbl:hover) {
+    #show-wallpaper-lbl:hover ~ #main-holder {
       opacity: 1;
     }
   }

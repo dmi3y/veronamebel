@@ -3,11 +3,11 @@ const wallpaperRefs = await Astro.glob("../assets/wallpapers/*.jpg");
 const wallpapers = wallpaperRefs.map((wallpaper) => wallpaper.default);
 ---
 
-<input type="checkbox" id="show-wallpaper" />
+<input data-nosnippet type="checkbox" id="show-wallpaper" />
 <label for="show-wallpaper" id="show-wallpaper-lbl"
-  ><div>Показать <strong>Модель</strong><b>Сайт</b></div>
+  ><div data-nosnippet>Показать <strong>Модель</strong><b>Сайт</b></div>
 </label>
-<div id="wallpaper" class="wallpaper">
+<div data-nosnippet id="wallpaper" class="wallpaper">
   <div
     data-wallpaper-index="0"
     data-wallpaper-set={wallpapers}
@@ -54,11 +54,11 @@ const wallpapers = wallpaperRefs.map((wallpaper) => wallpaper.default);
     background-color: var(--bg-color-opacity);
   }
 
-  #main-holder:has(~ #show-wallpaper:checked) {
+  #show-wallpaper:checked ~ #main-holder {
     display: none;
   }
 
-  #main-holder:has(~ #show-wallpaper-lbl:hover) {
+  #show-wallpaper-lbl:hover ~ #main-holder {
     opacity: 0.4;
   }
 
