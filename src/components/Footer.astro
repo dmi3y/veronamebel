@@ -23,7 +23,7 @@ import Map from "../components/Map.astro";
         href="https://api.whatsapp.com/send/?phone=996555684568&text=Здравствуйте%2C+у+меня+есть+вопрос"
         >+996 (555) 68 45 68</a
       >
-      <span class="footer-separator">&nbsp;|&nbsp;</span>
+      <span class="footer-separator footer-separator-insta">&nbsp;|&nbsp;</span>
       инстаграм <a href="https://www.instagram.com/verona_mebel_kg">
         verona_mebel_kg
       </a>
@@ -59,6 +59,14 @@ import Map from "../components/Map.astro";
   }
 
   @media (max-width: 1170px) {
+    .footer-separator-insta {
+      display: block;
+      color: transparent;
+      line-height: 0.5;
+    }
+  }
+
+  @media (max-width: 795px) {
     .footer-separator {
       display: block;
       color: transparent;
