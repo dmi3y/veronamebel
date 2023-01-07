@@ -15,19 +15,18 @@ import Map from "../components/Map.astro";
       </a> оставляйте заказы, задавайте вопросы
     </p>
     <p>
-      инстаграм <a href="https://www.instagram.com/verona_mebel_kg">
-        verona_mebel_kg
-      </a>
-    </p>
-    <p>
       телефон <a href="tel:+996555684568">
         <span itemprop="telephone">+996 (555) 68 45 68</span>
       </a>
-      <span>&nbsp;|&nbsp;</span>
+      <span class="footer-separator">&nbsp;|&nbsp;</span>
       whatsapp <a
         href="https://api.whatsapp.com/send/?phone=996555684568&text=Здравствуйте%2C+у+меня+есть+вопрос"
         >+996 (555) 68 45 68</a
       >
+      <span class="footer-separator">&nbsp;|&nbsp;</span>
+      инстаграм <a href="https://www.instagram.com/verona_mebel_kg">
+        verona_mebel_kg
+      </a>
     </p>
     <Map />
     <span itemprop="name">Верона Мебель</span>
@@ -57,5 +56,13 @@ import Map from "../components/Map.astro";
 
   .contacts {
     padding: 15px 15px 45px;
+  }
+
+  @media (max-width: 1170px) {
+    .footer-separator {
+      display: block;
+      color: transparent;
+      line-height: 0.5;
+    }
   }
 </style>
