@@ -12,6 +12,7 @@
     "deploy": "vercel"
   },
   "dependencies": {
+    "@astrojs/mdx": "^0.14.0",
     "astro": "^1.9.0"
   },
   "devDependencies": {
