@@ -22,17 +22,18 @@ const { frontmatter } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="yandex-verification" content="232a4c4f798cce7e" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={frontmatter.description} />
     <meta name="author" content="Verona Mebel" />
     <link rel="dns-prefetch" href="//www.google-analytics.com" />
     <link rel="dns-prefetch" href="//mc.yandex.ru" />
-    <title>{frontmatter.title}</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Alex+Brush"
-    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- I'm the Boss! -->
+    <title>{frontmatter.title}</title>
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={frontmatter.description} />
   </head>
   <body class="page">
     <Analytics />
