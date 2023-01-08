@@ -17,13 +17,13 @@ const wallpapers = wallpaperRefs.map((wallpaper) => wallpaper.default);
 </div>
 <script>
   const wallpaper = document.querySelector("#wallpaper div") as HTMLElement;
-  const wallpaperSet = wallpaper.dataset.wallpaperSet.split(",");
+  const wallpaperSet = wallpaper.dataset.wallpaperSet?.split(",") || [];
+
   wallpaper.addEventListener("animationiteration", (e) => {
     const target = e.target as HTMLElement;
     let n = Number(target.dataset.wallpaperIndex);
     n = n < wallpaperSet.length - 1 ? n + 1 : 0;
     const newWallpaper = wallpaperSet[n];
-    console.log({ n, newWallpaper });
     target.dataset.wallpaperIndex = String(n);
     wallpaper.style.backgroundImage = `url(${newWallpaper})`;
   });
