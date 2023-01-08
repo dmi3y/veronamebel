@@ -1,6 +1,18 @@
+---
+import logo from "../assets/logo.png";
+---
+
 <header>
   <h1>
-    <div class="logo" data-nosnippet>Verona Mebel</div>
+    <div
+      style_="width: 472px;padding-right: 13px;"
+      id="image-wrap"
+      class="logo"
+      data-nosnippet
+    >
+      Verona Mebel
+    </div>
+    <img class="logo" alt="Verona Mebel" width="485" src={logo} />
     <div class="phone">+996 (555) 68 45 68</div>
   </h1>
 </header>
@@ -32,3 +44,12 @@
     font-weight: 300;
   }
 </style>
+<script is:raw src="https://html2canvas.hertzen.com/dist/html2canvas.js"
+></script>
+<script is:raw>
+  html2canvas(document.getElementById("image-wrap"), {
+    backgroundColor: null,
+  }).then(function (canvas) {
+    document.body.appendChild(canvas);
+  });
+</script>
