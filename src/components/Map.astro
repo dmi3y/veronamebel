@@ -1,4 +1,6 @@
 ---
+import { Image } from "@astrojs/image/components";
+
 const api = "https://maps.googleapis.com/maps/api";
 const center = "center=42.86084750459291,74.61916751779304";
 const markers =
@@ -15,7 +17,16 @@ const maphref =
   "https://maps.google.com/maps?expflags=enable_star_based_justifications:true&ie=UTF8&cid=17452686713591379491&q=Verona+%D0%9C%D0%B5%D0%B1%D0%B5%D0%BB%D1%8C&iwloc=A";
 ---
 
-<a href={maphref}><img alt="Карта проезда" src={mapsrc} class="roadmap" /></a>
+<a href={maphref}
+  ><Image
+    alt="Карта проезда"
+    src={mapsrc}
+    class="roadmap"
+    width="640"
+    height="300"
+    format="webp"
+  /></a
+>
 <style>
   /* Map */
   .roadmap {
