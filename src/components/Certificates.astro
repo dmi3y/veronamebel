@@ -1,13 +1,15 @@
 ---
+import { Image } from "@astrojs/image/components";
+
 import certOne from "../assets/certificates/1.jpg";
 import certTwo from "../assets/certificates/2.jpg";
 import certThree from "../assets/certificates/3.jpg";
 ---
 
 <div id="certificates" class="certificates slot">
-  <img alt="Сертификат" class="cert" src={certOne} />
-  <img alt="Сертификат" class="cert" src={certTwo} />
-  <img alt="Сертификат" class="cert" src={certThree} />
+  <Image alt="Сертификат" class="cert" src={certOne} format="webp" />
+  <Image alt="Сертификат" class="cert" src={certTwo} format="webp" />
+  <Image alt="Сертификат" class="cert" src={certThree} format="webp" />
 </div>
 
 <style>
@@ -19,6 +21,7 @@ import certThree from "../assets/certificates/3.jpg";
 
   .cert {
     width: 32%;
+    height: 100%;
     margin-left: 1%;
   }
 

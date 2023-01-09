@@ -1,6 +1,14 @@
 ---
-const wallpaperRefs = await Astro.glob("../assets/wallpapers/*.jpg");
-const wallpapers = wallpaperRefs.map((wallpaper) => wallpaper.default);
+import { getImage } from "@astrojs/image";
+const wallpaperRefsRaw = await Astro.glob("../assets/wallpapers/*.jpg");
+
+const wallpaperReft = await Promise.all(
+  wallpaperRefsRaw.map((ref) => {
+    ref.default.format = "webp";
+    return getImage(ref.default);
+  })
+);
+const wallpapers = wallpaperReft.map((wallpaper) => wallpaper.src);
 ---
 
 <input data-nosnippet type="checkbox" id="show-wallpaper" />
