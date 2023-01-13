@@ -1,5 +1,35 @@
 # Changelog
 
+## [2.2.0](https://github.com/dmi3y/veronamebel/compare/v2.1.0...v2.2.0) (2023-01-13)
+
+
+### Features
+
+* move wallpaper up for better browser compatability ([249a3ac](https://github.com/dmi3y/veronamebel/commit/249a3ac7de7f8419ee76d0268f4f9fd19e9d1e62))
+* use image and webp formats ([b1f1871](https://github.com/dmi3y/veronamebel/commit/b1f1871f6b99060f10004eb672022f4131517e0f))
+
+
+### Bug Fixes
+
+* adding bunch of icons ([ac6b364](https://github.com/dmi3y/veronamebel/commit/ac6b364c175faef1c776c38c5be02cf7e0006c2a))
+* analytics to the bottom, bolder phone on tiny screen ([2360c8f](https://github.com/dmi3y/veronamebel/commit/2360c8ff1824c21009cabe4d3ec9a4b589d0869c))
+* aspect ratio with css for the map ([a48642b](https://github.com/dmi3y/veronamebel/commit/a48642bf23a19ba9c45de9f040859fddb63bc20a))
+* better responive map ([3d714db](https://github.com/dmi3y/veronamebel/commit/3d714dbb8dd7c3b7094f1a0eaad3091471ce8626))
+* cleanup footer info ([772b308](https://github.com/dmi3y/veronamebel/commit/772b30805ff0f5c263b4ce1ddd4d379fdd4af135))
+* css treatmen for height to have proper aspect ratio ([0a79984](https://github.com/dmi3y/veronamebel/commit/0a7998450f7b3f86f76d13ac5344b315c8528e3f))
+* lighthouse score with analytics! ([6a96643](https://github.com/dmi3y/veronamebel/commit/6a966430f29f939fdfec8559f49e45d34c29952d))
+* logo image responsive ([d8c0d95](https://github.com/dmi3y/veronamebel/commit/d8c0d956de5b44d6a66809ab6accff6d4cff9292))
+* more granular footer links responsive design ([350c638](https://github.com/dmi3y/veronamebel/commit/350c63838dd8324c6b09e86e7e7536dfa05ab956))
+* put analytics back on top ([ef88241](https://github.com/dmi3y/veronamebel/commit/ef88241abc70da2f8530451967c484c5c3327ed8))
+* raw use for analytics script ([41332db](https://github.com/dmi3y/veronamebel/commit/41332db23a6221b01ee43129c4727d0b7ceab33a))
+* remove size for logo, let autodetect ([4b068b1](https://github.com/dmi3y/veronamebel/commit/4b068b13f8953d5e0d9b947a01fd98dacc89e061))
+* responsive footer phone and instagram links ([4253f48](https://github.com/dmi3y/veronamebel/commit/4253f48436dd42c396c0ebe53f129c9e69b2da9e))
+* serve logo as webp ([d442519](https://github.com/dmi3y/veronamebel/commit/d4425191a02ba231a64a85a911e48a154db9425f))
+* update footer phone and whatsapp in one line ([3e1ed61](https://github.com/dmi3y/veronamebel/commit/3e1ed61d808eae826c28ea2fdcd88071516a27c2))
+* update readme and add prefetch for analytics ([623342e](https://github.com/dmi3y/veronamebel/commit/623342edd319646a4cfc34b058c943910b1e30c9))
+* use image for map ([aa0833e](https://github.com/dmi3y/veronamebel/commit/aa0833e2aec5599f8706ae4b0243fec7eb56769a))
+* use inline directive for analytics ([0289f13](https://github.com/dmi3y/veronamebel/commit/0289f134fa4d4f092c587fba7d2d8536ae0086e6))
+
 ## [2.1.0](https://github.com/dmi3y/veronamebel/compare/v2.0.0...v2.1.0) (2023-01-07)
 
 
