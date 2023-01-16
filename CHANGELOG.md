@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.2.1](https://github.com/dmi3y/veronamebel/compare/v2.2.0...v2.2.1) (2023-01-16)
+
+
+### Bug Fixes
+
+* remove invert  so it site does not revert colors on ios old brave ([0311e1e](https://github.com/dmi3y/veronamebel/commit/0311e1e161c99eb28cb2728c1ba02e0818047b32))
+* use flex for menu, get rid of .clr class ([5cb427d](https://github.com/dmi3y/veronamebel/commit/5cb427d2e06d76d3ae4d435a883de01218439428))
+
 ## [2.2.0](https://github.com/dmi3y/veronamebel/compare/v2.1.0...v2.2.0) (2023-01-13)
 
 
