@@ -96,9 +96,6 @@ const { frontmatter } = Astro.props;
 
     --link-color: #08fcf8;
   }
-  .clr {
-    clear: both;
-  }
 
   html,
   body {
@@ -166,6 +163,9 @@ const { frontmatter } = Astro.props;
       text-align: center;
     }
 
+    .menu {
+      flex-direction: column;
+    }
     .menu li {
       float: none;
       width: 100%;
