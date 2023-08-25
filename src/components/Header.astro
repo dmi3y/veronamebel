@@ -50,7 +50,12 @@ import Vcard from "./Vcard.astro";
   }
 
   @media (max-width: 1024px) {
+    header {
+      flex-direction: column;
+    }
     .contacts-qr {
+      height: 0;
+      width: 0;
       filter: opacity(0);
     }
   }
