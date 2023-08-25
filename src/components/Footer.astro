@@ -1,5 +1,6 @@
 ---
 import Map from "../components/Map.astro";
+import Vcard from "./Vcard.astro";
 ---
 
 <footer>
@@ -28,12 +29,20 @@ import Map from "../components/Map.astro";
         verona_mebel_kg
       </a>
     </p>
-    <Map />
+    <div class="contacts-bottom">
+      <div class="contacts-bottom-main">
+        <Map />
+      </div>
+      <div class="contacts-bottom-second">
+        <p>Электронная визитка</p>
+        <Vcard />
+        <p>Сканировать <br /> или <a href="/vcard.vcf" title="визитка vcard" download="vcard.vcf">загрузить</a></p>
+      </div>
+    </div>
+    <hr />
     <span itemprop="name">Верона Мебель</span>
     <span>&nbsp;|&nbsp;</span>
-    <span itemprop="address"
-      >Кыргызстан, г. Бишкек Октябрьский район, улица Кулатова 1/1a 1 этаж</span
-    >
+    <span itemprop="address">Кыргызстан, г. Бишкек Октябрьский район, улица Кулатова 1/1a 1 этаж</span>
     <p>График работы с 09:00 - до 19:00, воскресенье выходной</p>
   </section>
 </footer>
@@ -58,11 +67,43 @@ import Map from "../components/Map.astro";
     padding: 15px 15px 45px;
   }
 
+  .vcard-qr {
+    filter: opacity(.8) contrast(100%);
+    width: 200px;
+    height: 200px;
+  }
+
+  .contacts-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+
+  .contacts-bottom-main {
+    align-self: center;
+  }
+
+  .contacts-bottom-second {
+    white-space: nowrap;
+  }
+
+  hr {
+    filter: opacity(0.3);
+  }
+
   @media (max-width: 1170px) {
     .footer-separator-insta {
       display: block;
       color: transparent;
       line-height: 0.5;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .contacts-bottom {
+      flex-direction: column-reverse;
+      gap: 0;
     }
   }
 
