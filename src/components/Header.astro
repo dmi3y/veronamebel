@@ -1,9 +1,13 @@
 ---
 import { Image } from "@astrojs/image/components";
 import logo from "../assets/logo.png";
+import Vcard from "./Vcard.astro";
 ---
 
 <header>
+  <div class="contacts-qr">
+    <Vcard />
+  </div>
   <h1>
     <Image class="logo" alt="Verona Mebel" src={logo} format="webp" />
     <div class="phone">+996 (555) 68 45 68</div>
@@ -11,11 +15,19 @@ import logo from "../assets/logo.png";
 </header>
 <style is:global>
   /* Header */
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0 100px;
+    
+  }
   header h1 {
     font-size: 210%;
     text-shadow: 1px 5px 7px var(--bg-color);
     text-align: right;
-    margin: 15px 5px;
+    margin: 0;
   }
 
   header .logo {
@@ -35,5 +47,18 @@ import logo from "../assets/logo.png";
 
   .phone {
     font-weight: 300;
+  }
+
+  @media (max-width: 1024px) {
+    .contacts-qr {
+      filter: opacity(0);
+    }
+  }
+
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 150%;
+      text-align: center;
+    }
   }
 </style>

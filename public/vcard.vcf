@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+PHOTO;TYPE=PNG;VALUE=URI:https://www.verona-mebel.com/vcard-photo.png
+N:Шин;Алексей
+FN:Алексей Шин
+ORG:Верона Мебель
+TITLE:директор
+ADR:;;улица Кулатова 1/1a 1 этаж;Бишкек;;;Кыргызстан
+TEL;WORK;VOICE:
+TEL;CELL:+996 (555) 68 45 68 
+TEL;FAX:
+EMAIL;WORK;INTERNET:verona.mebel@gmail.com
+URL:www.verona-mebel.com
+END:VCARD

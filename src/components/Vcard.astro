@@ -1,0 +1,12 @@
+---
+import { Image } from "@astrojs/image/components";
+import vcardQr from "../assets/vcard/vcard-qr.png";
+---
+
+<Image alt="Vcard qr" class="vcard-qr" src={vcardQr} width={200} height={200} format="webp" />
+
+<style>
+  .vcard-qr {
+    filter: opacity(.7) contrast(100%);
+  }
+</style>
