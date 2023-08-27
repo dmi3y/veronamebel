@@ -35,13 +35,11 @@ import Vcard from "./Vcard.astro";
           Сканировать <br /> или <a
             href="/vcard/vcard.vcf"
             title="визитка vcard"
-            download="алексей-верона-мебель.vcf">загрузить</a
-          >
+            download="алексей-верона-мебель.vcf">загрузить</a>
         </p>
       </div>
     </div>
-  </section>
-  <section class="contacts">
+    <hr />
     <span itemprop="name">Верона Мебель</span>
     <span>&nbsp;|&nbsp;</span>
     <span itemprop="address"
@@ -68,11 +66,7 @@ import Vcard from "./Vcard.astro";
   }
 
   .contacts {
-    padding: 15px 15px;
-    margin: 1px 0 0;
-    + .contacts {
-      padding-bottom: 45px;
-    }
+    padding: 15px 15px 45px;
   }
 
   .vcard-qr {
