@@ -1,6 +1,6 @@
 BEGIN:VCARD
 VERSION:3.0
-PHOTO;TYPE=PNG;VALUE=URI:https://www.verona-mebel.com/vcard-photo.png
+PHOTO;TYPE=JPEG;VALUE=URI:https://www.verona-mebel.com/vcard/photo.jpg
 N:Шин;Алексей
 FN:Алексей Шин
 ORG:Верона Мебель
