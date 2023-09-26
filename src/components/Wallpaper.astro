@@ -1,11 +1,13 @@
 ---
-import { getImage } from "@astrojs/image";
+import { getImage } from "astro:assets";
 const wallpaperRefsRaw = await Astro.glob("../assets/wallpapers/*.jpg");
 
 const wallpaperReft = await Promise.all(
   wallpaperRefsRaw.map((ref) => {
-    ref.default.format = "webp";
-    return getImage(ref.default);
+    return getImage({
+      src: ref.default,
+      format: "webp",
+    });
   })
 );
 const wallpapers = wallpaperReft.map((wallpaper) => wallpaper.src);
