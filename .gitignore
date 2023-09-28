@@ -30,3 +30,6 @@ pnpm-debug.log*
 
 # vendor specific
 .vercel
+/test-results/
+/playwright-report/
+/playwright/.cache/
