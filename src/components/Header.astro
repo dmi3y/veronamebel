@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 import logo from "~/assets/logo.png";
 import Vcard from "./Vcard.astro";
+
+const site = Astro.site;
 ---
 
 <header>
@@ -9,7 +11,9 @@ import Vcard from "./Vcard.astro";
     <Vcard />
   </div>
   <h1>
-    <Image class="logo" alt="Verona Mebel" src={logo} format="webp" />
+    <a href={site} title="Мебель в Бишекеке - Верона Мебель">
+      <Image class="logo" alt="Verona Mebel" src={logo} format="webp" />
+    </a>
     <div class="phone">+996 (555) 68 45 68</div>
   </h1>
 </header>

@@ -1,0 +1,11 @@
+---
+import { getEntry } from "astro:content";
+import Certificates from "../components/Certificates.astro";
+import Main from "../layouts/Main.astro";
+
+const post = await getEntry("posts", "index");
+---
+
+<Main post={post}>
+  <Certificates />
+</Main>
