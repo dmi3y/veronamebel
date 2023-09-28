@@ -58,6 +58,10 @@ export default defineConfig({
 
     /* Test against mobile viewports. */
     {
+      name: "Tablet Chrome",
+      use: { ...devices["Galaxy Tab S4"] },
+    },
+    {
       name: "Mobile Chrome",
       use: { ...devices["Pixel 5"] },
     },

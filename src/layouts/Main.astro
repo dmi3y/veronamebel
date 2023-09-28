@@ -16,7 +16,7 @@ export interface Props {
 const { frontmatter } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -142,9 +142,6 @@ const { frontmatter } = Astro.props;
     .menu li {
       font-size: 1.3em;
     }
-    .cert {
-      width: 40%;
-    }
   }
 
   @media (max-width: 800px) {
@@ -169,11 +166,6 @@ const { frontmatter } = Astro.props;
 
     .menu li a {
       display: block;
-    }
-
-    .cert {
-      width: 100%;
-      margin-left: 0;
     }
 
     header {
