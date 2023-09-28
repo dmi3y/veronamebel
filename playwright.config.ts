@@ -10,6 +10,14 @@ import { defineConfig, devices } from "@playwright/test";
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+  // Run your local dev server before starting the tests
+  webServer: {
+    command: "yarn build && yarn preview",
+    url: "http://localhost:4321",
+    reuseExistingServer: !process.env.CI,
+    stdout: "ignore",
+    stderr: "pipe",
+  },
   testDir: "./tests",
   /* Run tests in files in parallel */
   fullyParallel: true,
