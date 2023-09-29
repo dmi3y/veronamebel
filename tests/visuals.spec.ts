@@ -1,30 +1,40 @@
 import { test, expect, type Page } from "@playwright/test";
 
-async function scrollPage(page: Page) {
-  const sizes = await page.evaluate(() => {
-    const browserHeight = window.innerHeight;
-    const pageHeight = document.body.scrollHeight;
+async function scrollPageDownUp(page: Page) {
+  const isScrolled = async () =>
+    await page.evaluate(() => {
+      const browserHeight = window.innerHeight;
+      const pageHeight = document.body.scrollHeight;
+      const scrollPosition = document.scrollingElement?.scrollTop || 0;
 
-    return { browserHeight, pageHeight };
-  });
+      return {
+        isOnBottom: scrollPosition + browserHeight >= pageHeight,
+        isOnTop: scrollPosition === 0,
+        isInside: scrollPosition > 0 && scrollPosition < pageHeight,
+      };
+    });
 
-  for (let i = 0; i < sizes.pageHeight; i += sizes.browserHeight) {
-    await page.mouse.wheel(0, i);
-    await page.waitForTimeout(100);
+  let isOnBottom = false;
+  let isOnTop = false;
+
+  while (!isOnBottom) {
+    await page.keyboard.down("PageDown");
+    await page.waitForTimeout(500);
+    await page.keyboard.up("PageDown");
+    ({ isOnBottom } = await isScrolled());
   }
 
-  for (let i = sizes.pageHeight; i > 0; i -= sizes.browserHeight) {
-    await page.mouse.wheel(0, -i);
-    await page.waitForTimeout(100);
+  while (!isOnTop) {
+    await page.keyboard.down("PageUp");
+    await page.waitForTimeout(500);
+    await page.keyboard.up("PageUp");
+    ({ isOnTop } = await isScrolled());
   }
-
-  await page.mouse.wheel(0, 0);
-  await page.waitForTimeout(100);
 }
 
 test("home", async ({ page }) => {
   await page.goto("./", { waitUntil: "load" });
-  await scrollPage(page);
+  await scrollPageDownUp(page);
   await expect(page).toHaveScreenshot({
     maxDiffPixels: 100,
     fullPage: true,
