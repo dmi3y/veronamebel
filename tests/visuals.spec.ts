@@ -19,7 +19,7 @@ async function scrollPage(page: Page) {
   }
 
   await page.mouse.wheel(0, 0);
-  await page.waitForTimeout(100);
+  await page.waitForTimeout(1000);
 }
 
 test("home", async ({ page }) => {
