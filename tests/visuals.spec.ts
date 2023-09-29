@@ -19,14 +19,14 @@ async function scrollPageDownUp(page: Page) {
 
   while (!isOnBottom) {
     await page.keyboard.down("PageDown");
-    await page.waitForTimeout(100);
+    await page.waitForTimeout(500);
     await page.keyboard.up("PageDown");
     ({ isOnBottom } = await isScrolled());
   }
 
   while (!isOnTop) {
     await page.keyboard.down("PageUp");
-    await page.waitForTimeout(100);
+    await page.waitForTimeout(500);
     await page.keyboard.up("PageUp");
     ({ isOnTop } = await isScrolled());
   }
