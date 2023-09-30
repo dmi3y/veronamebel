@@ -1,5 +1,27 @@
 # Changelog
 
+## [2.3.0](https://github.com/dmi3y/veronamebel/compare/v2.2.1...v2.3.0) (2023-09-29)
+
+
+### Features
+
+* add tests ([a739d27](https://github.com/dmi3y/veronamebel/commit/a739d27fb91ed565f9cfa182e95616640bd4e64a))
+* add vcard qr and download ([2a5a33d](https://github.com/dmi3y/veronamebel/commit/2a5a33d029033dd56d07cbdc347a09cc7b2b1cce))
+* upgrade everything, tweak postcss config ([8921e18](https://github.com/dmi3y/veronamebel/commit/8921e18f85ecaff367e59a7940b4a6010448126b))
+
+
+### Bug Fixes
+
+* config webserver for test ([993ee80](https://github.com/dmi3y/veronamebel/commit/993ee802f8d40d3863e1290b2c5e0a385e92a09a))
+* contacts bottom padding ([76a913a](https://github.com/dmi3y/veronamebel/commit/76a913a7a26245ad666ed34e022e3d51d882b653))
+* jumpy background on mobile with address bar or similar ([888aacf](https://github.com/dmi3y/veronamebel/commit/888aacfda8d4edf2c6bb9594e0039f2037e8f0f9))
+* rename vcard file ([92b503e](https://github.com/dmi3y/veronamebel/commit/92b503e7b71514605d1d9bc6ce380646a4b659af))
+* separate footer address section ([936561e](https://github.com/dmi3y/veronamebel/commit/936561e163afe7021299ba3573b134ad990569ec))
+* small screen logo ([19fa6c7](https://github.com/dmi3y/veronamebel/commit/19fa6c73235bcb334284c721c3f75f22e393a338))
+* try to fix test ([357a75f](https://github.com/dmi3y/veronamebel/commit/357a75f60f63b621f0d90ec7d42cf95cc1461065))
+* update expected snapshots for linux ([e7aa9e0](https://github.com/dmi3y/veronamebel/commit/e7aa9e070819907061f4bfb7aa771be5d3caf0da))
+* use jpg photo for contacts ([f52af7f](https://github.com/dmi3y/veronamebel/commit/f52af7ffc4d4f702c3501d6b3af7fef0b54f0737))
+
 ## [2.2.1](https://github.com/dmi3y/veronamebel/compare/v2.2.0...v2.2.1) (2023-01-16)
 
 
