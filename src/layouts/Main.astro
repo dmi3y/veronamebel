@@ -1,19 +1,17 @@
 ---
+import type { CollectionEntry } from "astro:content";
 import Wallpaper from "../components/Wallpaper.astro";
-import Certificates from "../components/Certificates.astro";
 import Footer from "../components/Footer.astro";
 import TopNav from "../components/TopNav.astro";
 import Header from "../components/Header.astro";
 import Analytics from "../components/Analytics.astro";
 
-export interface Props {
-  frontmatter: {
-    title: string;
-    description: string;
-  };
+interface Props {
+  post: CollectionEntry<"pages">;
 }
 
-const { frontmatter } = Astro.props;
+const { post } = Astro.props;
+const { Content } = await post.render();
 ---
 
 <!doctype html>
@@ -30,9 +28,9 @@ const { frontmatter } = Astro.props;
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="manifest" href="/site.webmanifest" />
-    <title>{frontmatter.title}</title>
-    <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={frontmatter.description} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <title>{post.data.title}</title>
+    <meta name="description" content={post.data.description} />
   </head>
   <body class="page">
     <Analytics />
@@ -41,9 +39,9 @@ const { frontmatter } = Astro.props;
       <Header />
       <TopNav />
       <section id="main" class="slot">
-        <slot />
+        <Content />
       </section>
-      <Certificates />
+      <slot />
       <Footer />
     </main>
   </body>
@@ -127,6 +125,7 @@ const { frontmatter } = Astro.props;
   .slot {
     background-color: var(--bg-color-opacity);
     padding: 15px;
+    margin-bottom: 1px;
   }
 
   .slot:target {

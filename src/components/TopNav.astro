@@ -1,12 +1,20 @@
+---
+const site = Astro.site;
+---
+
 <nav>
   <ul class="menu">
     <li>
-      <a href="#main"><span data-nosnippet>О Компании</span></a>
+      <a href={`${site}#main`}><span data-nosnippet>О Компании</span></a>
     </li>
     <li>
-      <a href="#certificates"><span data-nosnippet>Сертификаты</span></a>
+      <a href={`${site}#certificates`}
+        ><span data-nosnippet>Сертификаты</span></a
+      >
     </li>
-    <li><a href="#contacts"><span data-nosnippet>Контакты</span></a></li>
+    <li>
+      <a href={`#contacts`}><span data-nosnippet>Контакты</span></a>
+    </li>
   </ul>
 </nav>
 

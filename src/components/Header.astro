@@ -1,15 +1,13 @@
 ---
 import { Image } from "astro:assets";
 import logo from "~/assets/logo.png";
-import Vcard from "./Vcard.astro";
 ---
 
 <header>
-  <div class="contacts-qr">
-    <Vcard />
-  </div>
   <h1>
-    <Image class="logo" alt="Verona Mebel" src={logo} format="webp" />
+    <a href="/" title="Мебель в Бишекеке - Верона Мебель">
+      <Image class="logo" alt="Verona Mebel" src={logo} format="webp" />
+    </a>
     <div class="phone">+996 (555) 68 45 68</div>
   </h1>
 </header>
@@ -17,7 +15,7 @@ import Vcard from "./Vcard.astro";
   /* Header */
   header {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
     margin: 50px 0 100px;
@@ -51,11 +49,6 @@ import Vcard from "./Vcard.astro";
   @media (max-width: 1024px) {
     header {
       flex-direction: column;
-    }
-    .contacts-qr {
-      height: 0;
-      width: 0;
-      filter: opacity(0);
     }
   }
 
