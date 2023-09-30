@@ -2,7 +2,7 @@
 import { getEntry } from "astro:content";
 import Main from "../layouts/Main.astro";
 
-const post = await getEntry("posts", "about");
+const post = await getEntry("pages", "about");
 ---
 
 <Main post={post} />
