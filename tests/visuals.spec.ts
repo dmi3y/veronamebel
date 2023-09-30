@@ -49,3 +49,12 @@ test("about", async ({ page }) => {
     fullPage: true,
   });
 });
+
+test("care", async ({ page }) => {
+  await page.goto("./care", { waitUntil: "load" });
+  await scrollPageDownUp(page);
+  await expect(page).toHaveScreenshot({
+    maxDiffPixels: 100,
+    fullPage: true,
+  });
+});
