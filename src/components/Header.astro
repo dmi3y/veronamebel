@@ -7,9 +7,6 @@ const site = Astro.site;
 ---
 
 <header>
-  <div class="contacts-qr">
-    <Vcard />
-  </div>
   <h1>
     <a href={site} title="Мебель в Бишекеке - Верона Мебель">
       <Image class="logo" alt="Verona Mebel" src={logo} format="webp" />
@@ -21,7 +18,7 @@ const site = Astro.site;
   /* Header */
   header {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
     margin: 50px 0 100px;
@@ -55,11 +52,6 @@ const site = Astro.site;
   @media (max-width: 1024px) {
     header {
       flex-direction: column;
-    }
-    .contacts-qr {
-      height: 0;
-      width: 0;
-      filter: opacity(0);
     }
   }
 
