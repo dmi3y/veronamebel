@@ -1,0 +1,7 @@
+{
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/about", "destination": "/корпусная-мебель-в-бишкеке" },
+    { "source": "/care", "destination": "/уход-за-корпусной-мебелью" }
+  ]
+}

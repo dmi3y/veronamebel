@@ -33,7 +33,7 @@ async function scrollPageDownUp(page: Page) {
 }
 
 test("home", async ({ page }) => {
-  await page.goto("./", { waitUntil: "load" });
+  await page.goto("/", { waitUntil: "load" });
   await scrollPageDownUp(page);
   await expect(page).toHaveScreenshot({
     maxDiffPixels: 100,
@@ -42,7 +42,7 @@ test("home", async ({ page }) => {
 });
 
 test("about", async ({ page }) => {
-  await page.goto("./about", { waitUntil: "load" });
+  await page.goto("корпусная-мебель-в-бишкеке", { waitUntil: "load" });
   await scrollPageDownUp(page);
   await expect(page).toHaveScreenshot({
     maxDiffPixels: 100,
@@ -51,7 +51,7 @@ test("about", async ({ page }) => {
 });
 
 test("care", async ({ page }) => {
-  await page.goto("./care", { waitUntil: "load" });
+  await page.goto("уход-за-корпусной-мебелью", { waitUntil: "load" });
   await scrollPageDownUp(page);
   await expect(page).toHaveScreenshot({
     maxDiffPixels: 100,
