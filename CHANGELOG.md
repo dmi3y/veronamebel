@@ -1,5 +1,29 @@
 # Changelog
 
+## [2.4.0](https://github.com/dmi3y/veronamebel/compare/v2.3.0...v2.4.0) (2023-10-01)
+
+
+### Features
+
+* add care page ([a405c63](https://github.com/dmi3y/veronamebel/commit/a405c638eacd03f2b17b6b5b8036fc939714b914))
+* add more slides to background, speed up transition ([2ad29c1](https://github.com/dmi3y/veronamebel/commit/2ad29c1293fe2f04019ade60b9e4f69ceaaebd6a))
+* tweak content ([dfc07b5](https://github.com/dmi3y/veronamebel/commit/dfc07b54e12cae2f39c25601f69f43bfa4fecfe3))
+
+
+### Bug Fixes
+
+* add custom 404 ([9abe835](https://github.com/dmi3y/veronamebel/commit/9abe83555d67efc9a9c87939b67431f33c5905da))
+* anchor for care link ([64ffbe0](https://github.com/dmi3y/veronamebel/commit/64ffbe08019ac34d0151aeecb3e0405ccfb6b72b))
+* back to 1s transition ([46df094](https://github.com/dmi3y/veronamebel/commit/46df0945e1b7c8492110f719d45c8eee7938bfab))
+* local tests ([fa80108](https://github.com/dmi3y/veronamebel/commit/fa8010806c9ef017e2389f57dd68d012a5d1b32c))
+* more seo ([38632ac](https://github.com/dmi3y/veronamebel/commit/38632acd402b187a2b44d1f18a811e12c95b285b))
+* redirect ([aff37d8](https://github.com/dmi3y/veronamebel/commit/aff37d8e87b8d7793e7dafd830453550b3d1c3ba))
+* remove qr code from header ([b01aafa](https://github.com/dmi3y/veronamebel/commit/b01aafad2c15ce5e8bd27afcd8db9a64b7bf4620))
+* update content one more time ([e7cd09e](https://github.com/dmi3y/veronamebel/commit/e7cd09e98f0e000a857cd7e9857bc168caf977c4))
+* update snapshots with no qr ([41fb72d](https://github.com/dmi3y/veronamebel/commit/41fb72d25268505970010c13b492bec780ce8ee4))
+* update test snapshots with content edit ([cb3e6d4](https://github.com/dmi3y/veronamebel/commit/cb3e6d448bf2cac972a02d3f672b884db3ce7bdc))
+* update tests, less opacity on qr code ([495ca95](https://github.com/dmi3y/veronamebel/commit/495ca95c4473e094dbf2daee484d72569e7578db))
+
 ## [2.3.0](https://github.com/dmi3y/veronamebel/compare/v2.2.1...v2.3.0) (2023-09-29)
 
 
