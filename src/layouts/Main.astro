@@ -34,7 +34,7 @@ const { Content } = await post.render();
   </head>
   <body class="page">
     <Analytics />
-    <Wallpaper />
+    <Wallpaper wallpapers={post.data.wallpapers} />
     <main id="main-holder" class="wrapper">
       <Header />
       <TopNav />

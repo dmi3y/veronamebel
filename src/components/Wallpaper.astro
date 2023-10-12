@@ -1,16 +1,12 @@
 ---
-import { getImage } from "astro:assets";
-const wallpaperRefsRaw = await Astro.glob("../assets/wallpapers/*.jpg");
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
 
-const wallpaperReft = await Promise.all(
-  wallpaperRefsRaw.map((ref) => {
-    return getImage({
-      src: ref.default,
-      format: "webp",
-    });
-  })
-);
-const wallpapers = wallpaperReft.map((wallpaper) => wallpaper.src);
+interface Props {
+  wallpapers: ImageMetadata[];
+}
+
+const { wallpapers }: Props = Astro.props;
 ---
 
 <input data-nosnippet type="checkbox" id="show-wallpaper" />
@@ -18,28 +14,41 @@ const wallpapers = wallpaperReft.map((wallpaper) => wallpaper.src);
   ><div data-nosnippet>Показать <strong>Модель</strong><b>Сайт</b></div>
 </label>
 <div data-nosnippet id="wallpaper" class="wallpaper">
-  <div
-    data-wallpaper-index="0"
-    data-wallpaper-set={wallpapers}
-    style={`background-image: url(${wallpapers[0]})`}
-  >
-  </div>
+  {
+    wallpapers.map((wallpaper, ix) => {
+      return (
+        <picture class={ix === 0 ? "active" : ""}>
+          <source srcset={wallpaper.src} type="image/webp" />
+          <Image src={wallpaper} alt="wallpaper" class="wallpaper-image" />
+        </picture>
+      );
+    })
+  }
 </div>
 <script>
-  const wallpaper = document.querySelector("#wallpaper div") as HTMLElement;
-  const wallpaperSet = wallpaper.dataset.wallpaperSet?.split(",") || [];
+  (function wallpaper() {
+    const wallpaper = document.querySelector("#wallpaper") as HTMLElement;
+    const firstPicture = document.querySelector(
+      "#wallpaper picture:first-child"
+    ) as HTMLElement;
 
-  wallpaper.addEventListener("animationiteration", (e) => {
-    const target = e.target as HTMLElement;
-    let n = Number(target.dataset.wallpaperIndex);
-    n = n < wallpaperSet.length - 1 ? n + 1 : 0;
-    const newWallpaper = wallpaperSet[n];
-    target.dataset.wallpaperIndex = String(n);
-    wallpaper.style.backgroundImage = `url(${newWallpaper})`;
-  });
+    wallpaper.addEventListener("animationiteration", (_e) => {
+      const activePicture = document.querySelector(
+        "#wallpaper picture.active"
+      ) as HTMLSourceElement;
+
+      const nextAfterActivePicture =
+        activePicture.nextElementSibling as HTMLSourceElement;
+      const nextPicture = nextAfterActivePicture || firstPicture;
+
+      activePicture.classList.remove("active");
+      nextPicture.classList.add("active");
+    });
+  })();
 </script>
+
 <style is:global>
-  /* Wallpaper */
+  /* Wallpaper - is:global needed for hiding page content */
   #show-wallpaper {
     display: none;
   }
@@ -82,14 +91,22 @@ const wallpapers = wallpaperReft.map((wallpaper) => wallpaper.src);
     inset: 0;
     z-index: -10;
   }
-  .wallpaper div {
+
+  .wallpaper picture {
+    position: absolute;
+    inset: 0;
+    display: none;
+  }
+
+  .wallpaper picture.active {
+    display: block;
+  }
+
+  .wallpaper-image {
     animation: var(--wallpaper-animation-name)
       var(--wallpaper-animation-duration) linear infinite;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vmax;
     width: 100vw;
+    height: 100vmax;
+    object-fit: cover;
   }
 </style>
