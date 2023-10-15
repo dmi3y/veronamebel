@@ -19,7 +19,14 @@ const { wallpapers }: Props = Astro.props;
       return (
         <picture class={ix === 0 ? "active" : ""}>
           <source srcset={wallpaper.src} type="image/webp" />
-          <Image src={wallpaper} alt="wallpaper" class="wallpaper-image" />
+          <Image
+            src={wallpaper}
+            alt="wallpaper"
+            class:list={[
+              "wallpaper-image",
+              { animated: wallpapers.length > 1 },
+            ]}
+          />
         </picture>
       );
     })
@@ -103,10 +110,13 @@ const { wallpapers }: Props = Astro.props;
   }
 
   .wallpaper-image {
-    animation: var(--wallpaper-animation-name)
-      var(--wallpaper-animation-duration) linear infinite;
     width: 100vw;
     height: 100vmax;
     object-fit: cover;
+  }
+
+  .wallpaper-image.animated {
+    animation: var(--wallpaper-animation-name)
+      var(--wallpaper-animation-duration) linear infinite;
   }
 </style>
