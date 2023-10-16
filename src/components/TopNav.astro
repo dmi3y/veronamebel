@@ -27,6 +27,7 @@ const site = Astro.site;
     margin: 0;
     padding: 0;
     display: flex;
+    width: 100%;
   }
 
   .menu a {
@@ -42,9 +43,9 @@ const site = Astro.site;
     background-color: var(--bg-color-opacity);
     margin: 0 0 1px 1px;
     font-size: 1.5em;
-    width: calc((100% - 2px) / 3);
     text-align: center;
     padding: 10px 0;
+    width: inherit;
   }
 
   .menu li:first-child {

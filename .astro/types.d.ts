@@ -184,7 +184,16 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"pages": {
+		"models": {
+"pushkin-kot.mdx": {
+	id: "pushkin-kot.mdx";
+  slug: "пушкин-кот";
+  body: string;
+  collection: "models";
+  data: InferEntrySchema<"models">
+} & { render(): Render[".mdx"] };
+};
+"pages": {
 "404.mdx": {
 	id: "404.mdx";
   slug: "404";
