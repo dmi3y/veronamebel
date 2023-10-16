@@ -19,14 +19,7 @@ const { wallpapers }: Props = Astro.props;
       return (
         <picture class={ix === 0 ? "active" : ""}>
           <source srcset={wallpaper.src} type="image/webp" />
-          <Image
-            src={wallpaper}
-            alt="wallpaper"
-            class:list={[
-              "wallpaper-image",
-              { animated: wallpapers.length > 1 },
-            ]}
-          />
+          <Image src={wallpaper} alt="wallpaper" class="wallpaper-image" />
         </picture>
       );
     })
@@ -54,8 +47,46 @@ const { wallpapers }: Props = Astro.props;
   })();
 </script>
 
-<style is:global>
+<style
+  is:global
+  define:vars={{
+    "wallpaper-animation-duration": "10s",
+    "wallpaper-animation-name":
+      wallpapers.length > 1 ? "foggy-memories" : "clear-win",
+  }}
+>
   /* Wallpaper - is:global needed for hiding page content */
+  @keyframes foggy-memories {
+    0% {
+      transform: scale(1);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    95% {
+      opacity: 1;
+    }
+    99% {
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1.1);
+      opacity: 0;
+    }
+  }
+
+  @keyframes clear-win {
+    0% {
+      transform: scale(1);
+    }
+    30% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
   #show-wallpaper {
     display: none;
   }
@@ -113,9 +144,6 @@ const { wallpapers }: Props = Astro.props;
     width: 100vw;
     height: 100vmax;
     object-fit: cover;
-  }
-
-  .wallpaper-image.animated {
     animation: var(--wallpaper-animation-name)
       var(--wallpaper-animation-duration) linear infinite;
   }
